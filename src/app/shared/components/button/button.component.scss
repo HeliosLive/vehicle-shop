@@ -1,0 +1,50 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  overflow: hidden;
+  width: inherit;
+  height: var(--hls-button-height);
+  border-radius: var(--hls-button-border-radius);
+  cursor: pointer;
+
+  &[fullWidth='true'] {
+    width: 100%;
+  }
+
+  $colors: primary, secondary, danger;
+  @each $color in $colors {
+    &[color='#{$color}'] {
+      &.hls-button,
+      &.hls-button-stroked {
+        color: var(--hls-button-background-color-#{$color});
+      }
+
+      &.hls-button-flat,
+      &.hls-button-raised {
+        background-color: var(--hls-button-background-color-#{$color});
+        border: var(--hls-button-border-#{$color});
+      }
+    }
+  }
+
+  &.hls-button:not(.hls-button-disabled) {
+    background-color: transparent;
+    border: none;
+  }
+
+  &.hls-button-raised:not(.hls-button-disabled) {
+    box-shadow: 0 3px 1px -2px #0003, 0 2px 2px #00000024, 0 1px 5px #0000001f;
+  }
+
+  &.hls-button-stroked:not(.hls-button-disabled) {
+    background-color: transparent;
+    border: var(--hls-button-border-secondary);
+  }
+
+  &.hls-button-disabled {
+    cursor: default;
+    pointer-events: none;
+  }
+}

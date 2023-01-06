@@ -1,15 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { createComponentFactory, Spectator } from '@ngneat/spectator/jest';
 
 import type { LabelColor, LabelSize } from './label.component';
 import { LabelComponent } from './label.component';
-import { HLSLabelModule } from './label.module';
 
 @Component({
   selector: 'app-content-projection-test',
   standalone: true,
-  imports: [HLSLabelModule],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   template: `<hls-label>{{ projectedContent }}</hls-label>`,
 })
 export class ContentProjectionTestComponent {
@@ -96,7 +95,7 @@ describe('LabelComponent', () => {
 
   it('should display the projected content correctly', () => {
     const projectedElement: HTMLDivElement | null =
-      ContentProjectionSpectator.query('fl-label');
+      ContentProjectionSpectator.query('hls-label');
     expect(projectedElement?.textContent).toEqual(
       ContentProjectionSpectator.component.projectedContent
     );

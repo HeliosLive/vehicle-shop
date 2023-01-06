@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="4" failures="0" errors="0" time="3.776">
-  <testsuite name="ThemeService" errors="0" failures="0" skipped="0" timestamp="2023-01-06T15:35:05" time="3.198" tests="4">
-    <testcase classname="ThemeService should create" name="ThemeService should create" time="0.015">
+<testsuites name="jest tests" tests="10" failures="0" errors="0" time="4.498">
+  <testsuite name="LabelComponent" errors="0" failures="0" skipped="0" timestamp="2023-01-06T16:35:13" time="3.825" tests="10">
+    <testcase classname="LabelComponent should create" name="LabelComponent should create" time="0.045">
     </testcase>
-    <testcase classname="ThemeService initialize should set the light theme if schema does not match" name="ThemeService initialize should set the light theme if schema does not match" time="0.007">
+    <testcase classname="LabelComponent should Host have data-cy attribute equals to testId input" name="LabelComponent should Host have data-cy attribute equals to testId input" time="0.028">
     </testcase>
-    <testcase classname="ThemeService initialize should set the dark theme if schema matches" name="ThemeService initialize should set the dark theme if schema matches" time="0.002">
+    <testcase classname="LabelComponent should color data attribute equals to color input" name="LabelComponent should color data attribute equals to color input" time="0.015">
     </testcase>
-    <testcase classname="ThemeService initialize should set the subject with correct value" name="ThemeService initialize should set the subject with correct value" time="0.002">
+    <testcase classname="LabelComponent should size data attribute equals to size input" name="LabelComponent should size data attribute equals to size input" time="0.028">
+    </testcase>
+    <testcase classname="LabelComponent should ellipsis data attribute equals to ellipsis input" name="LabelComponent should ellipsis data attribute equals to ellipsis input" time="0.026">
+    </testcase>
+    <testcase classname="LabelComponent should underline data attribute equals to underline input" name="LabelComponent should underline data attribute equals to underline input" time="0.013">
+    </testcase>
+    <testcase classname="LabelComponent should disabled data attribute equals to disabled input" name="LabelComponent should disabled data attribute equals to disabled input" time="0.033">
+    </testcase>
+    <testcase classname="LabelComponent should pointer data attribute equals to pointer input" name="LabelComponent should pointer data attribute equals to pointer input" time="0.01">
+    </testcase>
+    <testcase classname="LabelComponent should display the projected content correctly" name="LabelComponent should display the projected content correctly" time="0.032">
+    </testcase>
+    <testcase classname="LabelComponent should label for attribute equals to for input" name="LabelComponent should label for attribute equals to for input" time="0.011">
     </testcase>
   </testsuite>
 </testsuites>
