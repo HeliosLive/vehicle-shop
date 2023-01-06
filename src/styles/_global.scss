@@ -123,8 +123,8 @@ html[data-theme='light'] {
   --hls-card-background-color: rgba(var(--hls-color-neutral-6), 1);
   --hls-button-background-color-secondary: rgba(var(--hls-color-neutral-6), 1);
   --hls-tooltip-background-color: rgba(var(--hls-color-neutral-6), 1);
-  --hls-ripple-color-primary: rgba(var(--hls-color-neutral-6), 1);
-  --hls-ripple-color-secondary: rgba(var(--hls-color-neutral-5), 1);
+  --hls-ripple-color-light: rgba(var(--hls-color-neutral-6), 1);
+  --hls-ripple-color-dark: rgba(var(--hls-color-neutral-5), 1);
 
   /* Color palette */
   --hls-color-primary: 0, 145, 255; // #0091FF
@@ -156,8 +156,8 @@ html[data-theme='dark'] {
   --hls-card-background-color: rgba(var(--hls-color-neutral-5), 1);
   --hls-button-background-color-secondary: rgba(var(--hls-color-neutral-5), 1);
   --hls-tooltip-background-color: rgba(var(--hls-color-neutral-5), 1);
-  --hls-ripple-color-primary: rgba(var(--hls-color-neutral-3), 1);
-  --hls-ripple-color-secondary: rgba(var(--hls-color-neutral-4), 1);
+  --hls-ripple-color-light: rgba(var(--hls-color-neutral-3), 1);
+  --hls-ripple-color-dark: rgba(var(--hls-color-neutral-4), 1);
 
   /* Color palette */
   --hls-color-primary: 127, 180, 254; // #7fb4fe

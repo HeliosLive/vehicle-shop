@@ -1,10 +1,12 @@
 .ripple {
   position: absolute;
   border-radius: 50%;
+  background-color: var(--hls-ripple-color);
   opacity: 0.5;
   transform: scale(0);
   animation-name: ripple;
   animation-timing-function: linear;
+  animation-duration: var(--hls-ripple-speed);
 
   &-container {
     position: relative;
@@ -12,12 +14,12 @@
     cursor: pointer;
   }
 
-  &.primary {
-    background-color: var(--hls-ripple-color-primary);
+  &.light {
+    background-color: var(--hls-ripple-color-light);
   }
 
-  &.secondary {
-    background-color: var(--hls-ripple-color-secondary);
+  &.dark {
+    background-color: var(--hls-ripple-color-dark);
   }
 
   &.slow {

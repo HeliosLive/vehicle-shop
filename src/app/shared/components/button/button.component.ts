@@ -9,6 +9,7 @@ import {
 } from '@angular/core';
 
 import type { LabelColor } from '@shared/components/label/label.component';
+import { RippleDirective } from '@shared/directives/ripple.directive';
 
 export type ButtonColor = 'primary' | 'secondary' | 'danger';
 
@@ -28,6 +29,7 @@ const BUTTON_HOST_ATTRIBUTES = [
     '[attr.disabled]': 'disabled || null',
     '[class.hls-button-disabled]': 'disabled',
   },
+  hostDirectives: [RippleDirective],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ButtonComponent implements OnInit {

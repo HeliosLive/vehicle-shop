@@ -6,6 +6,7 @@
   overflow: hidden;
   width: inherit;
   height: var(--hls-button-height);
+  border: none;
   border-radius: var(--hls-button-border-radius);
   cursor: pointer;
 
@@ -24,14 +25,12 @@
       &.hls-button-flat,
       &.hls-button-raised {
         background-color: var(--hls-button-background-color-#{$color});
-        border: var(--hls-button-border-#{$color});
       }
     }
   }
 
   &.hls-button:not(.hls-button-disabled) {
     background-color: transparent;
-    border: none;
   }
 
   &.hls-button-raised:not(.hls-button-disabled) {
@@ -40,7 +39,6 @@
 
   &.hls-button-stroked:not(.hls-button-disabled) {
     background-color: transparent;
-    border: var(--hls-button-border-secondary);
   }
 
   &.hls-button-disabled {
