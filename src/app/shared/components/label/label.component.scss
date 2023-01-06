@@ -1,0 +1,49 @@
+:host {
+  $colors: 'white', 'black', sun, moon, neutral-1, neutral-2, neutral-3, info,
+    danger;
+  $sizes: h1, h2, h3, h4, h5, h6, subheading-1, subheading-2, subheading-bold-2,
+    subheading-bold-3, p1, p2, caption, overline, overline-2, stats;
+
+  @each $color in $colors {
+    &[data-color='#{$color}'] {
+      color: rgba(var(--hls-color-#{$color}), 1);
+    }
+  }
+  @each $size in $sizes {
+    &[data-size='#{$size}'] {
+      font-size: var(--hls-font-#{$size}-size);
+      font-weight: var(--hls-font-#{$size}-weight);
+      line-height: var(--hls-font-#{$size}-height);
+    }
+  }
+
+  &[data-error='true'] {
+    border: solid 0.125rem var(--hls-input-color-error);
+  }
+
+  &[data-pointer='true'] {
+    label {
+      cursor: pointer;
+    }
+  }
+
+  &[data-underline='true'] {
+    -webkit-text-decoration-line: underline;
+    text-decoration-line: underline;
+    label {
+      cursor: pointer;
+    }
+  }
+
+  &[data-ellipsis='true'] {
+    width: 100%;
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &[data-disabled='true'] {
+    opacity: 0.5;
+  }
+}

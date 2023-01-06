@@ -13,23 +13,23 @@
   }
 
   &.primary {
-    background-color: var(--fl-ripple-color-primary);
+    background-color: var(--hls-ripple-color-primary);
   }
 
   &.secondary {
-    background-color: var(--fl-ripple-color-secondary);
+    background-color: var(--hls-ripple-color-secondary);
   }
 
   &.slow {
-    animation-duration: var(--fl-ripple-speed-slow);
+    animation-duration: var(--hls-ripple-speed-slow);
   }
 
   &.normal {
-    animation-duration: var(--fl-ripple-speed-normal);
+    animation-duration: var(--hls-ripple-speed-normal);
   }
 
   &.fast {
-    animation-duration: var(--fl-ripple-speed-fast);
+    animation-duration: var(--hls-ripple-speed-fast);
   }
 }
 

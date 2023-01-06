@@ -1,5 +1,5 @@
 * {
-  font-family: var(--fl-font-family);
+  font-family: var(--hls-font-family);
 }
 
 html {
@@ -16,7 +16,7 @@ html {
 
 body {
   margin: 0;
-  background-color: var(--fl-app-background-color);
+  background-color: var(--hls-app-background-color);
 
   /**
      * apply a blink to an input with opacity to prevent scrolling when focus on iOS

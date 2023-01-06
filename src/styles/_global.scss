@@ -10,174 +10,174 @@
 
 :root {
   /* Font families */
-  --fl-font-family: 'Roboto', sans-serif;
-  --fl-font-family-monospace: 'Roboto Mono', monospace;
+  --hls-font-family: 'Roboto', sans-serif;
+  --hls-font-family-monospace: 'Roboto Mono', monospace;
 
   /* Font size */
-  --fl-font-h1-size: 3rem;
-  --fl-font-h2-size: 2.25rem;
-  --fl-font-h3-size: 2rem;
-  --fl-font-h4-size: 1.5rem;
-  --fl-font-h5-size: 1.25rem;
-  --fl-font-h6-size: 1.125rem;
-  --fl-font-subheading-1-size: 1.125rem;
-  --fl-font-subheading-2-size: 1rem;
-  --fl-font-subheading-bold-2-size: 1rem;
-  --fl-font-subheading-bold-3-size: 0.875rem;
-  --fl-font-p1-size: 0.875rem;
-  --fl-font-p2-size: 0.75rem;
-  --fl-font-caption-size: 0.625rem;
-  --fl-font-overline-size: 0.875rem;
-  --fl-font-overline-2-size: 0.75rem;
-  --fl-font-stats-size: 3.75rem;
+  --hls-font-h1-size: 3rem;
+  --hls-font-h2-size: 2.25rem;
+  --hls-font-h3-size: 2rem;
+  --hls-font-h4-size: 1.5rem;
+  --hls-font-h5-size: 1.25rem;
+  --hls-font-h6-size: 1.125rem;
+  --hls-font-subheading-1-size: 1.125rem;
+  --hls-font-subheading-2-size: 1rem;
+  --hls-font-subheading-bold-2-size: 1rem;
+  --hls-font-subheading-bold-3-size: 0.875rem;
+  --hls-font-p1-size: 0.875rem;
+  --hls-font-p2-size: 0.75rem;
+  --hls-font-caption-size: 0.625rem;
+  --hls-font-overline-size: 0.875rem;
+  --hls-font-overline-2-size: 0.75rem;
+  --hls-font-stats-size: 3.75rem;
 
   /* Font weight */
-  --fl-font-h1-weight: 500;
-  --fl-font-h2-weight: 500;
-  --fl-font-h3-weight: 500;
-  --fl-font-h4-weight: 500;
-  --fl-font-h5-weight: 500;
-  --fl-font-h6-weight: 500;
-  --fl-font-subheading-1-weight: 400;
-  --fl-font-subheading-2-weight: 400;
-  --fl-font-subheading-bold-2-weight: 500;
-  --fl-font-subheading-bold-3-weight: 500;
-  --fl-font-p1-weight: 400;
-  --fl-font-p2-weight: 400;
-  --fl-font-caption-weight: 400;
-  --fl-font-overline-weight: 400;
-  --fl-font-overline-2-weight: 400;
-  --fl-font-stats-weight: 700;
+  --hls-font-h1-weight: 500;
+  --hls-font-h2-weight: 500;
+  --hls-font-h3-weight: 500;
+  --hls-font-h4-weight: 500;
+  --hls-font-h5-weight: 500;
+  --hls-font-h6-weight: 500;
+  --hls-font-subheading-1-weight: 400;
+  --hls-font-subheading-2-weight: 400;
+  --hls-font-subheading-bold-2-weight: 500;
+  --hls-font-subheading-bold-3-weight: 500;
+  --hls-font-p1-weight: 400;
+  --hls-font-p2-weight: 400;
+  --hls-font-caption-weight: 400;
+  --hls-font-overline-weight: 400;
+  --hls-font-overline-2-weight: 400;
+  --hls-font-stats-weight: 700;
 
   /* Font height */
-  --fl-font-h1-height: 3.25rem;
-  --fl-font-h2-height: 2.75rem;
-  --fl-font-h3-height: 2.5rem;
-  --fl-font-h4-height: 2rem;
-  --fl-font-h5-height: 1.75rem;
-  --fl-font-h6-height: 1.625rem;
-  --fl-font-subheading-1-height: 1, 625rem;
-  --fl-font-subheading-2-height: 1.5rem;
-  --fl-font-subheading-bold-2-height: 1.5rem;
-  --fl-font-subheading-bold-3-height: 1.25rem;
-  --fl-font-p1-height: 1.25rem;
-  --fl-font-p2-height: 1.25rem;
-  --fl-font-caption-height: 1rem;
-  --fl-font-overline-height: 1.5rem;
-  --fl-font-overline-2-height: 1.25rem;
-  --fl-font-stats-height: 4rem;
+  --hls-font-h1-height: 3.25rem;
+  --hls-font-h2-height: 2.75rem;
+  --hls-font-h3-height: 2.5rem;
+  --hls-font-h4-height: 2rem;
+  --hls-font-h5-height: 1.75rem;
+  --hls-font-h6-height: 1.625rem;
+  --hls-font-subheading-1-height: 1, 625rem;
+  --hls-font-subheading-2-height: 1.5rem;
+  --hls-font-subheading-bold-2-height: 1.5rem;
+  --hls-font-subheading-bold-3-height: 1.25rem;
+  --hls-font-p1-height: 1.25rem;
+  --hls-font-p2-height: 1.25rem;
+  --hls-font-caption-height: 1rem;
+  --hls-font-overline-height: 1.5rem;
+  --hls-font-overline-2-height: 1.25rem;
+  --hls-font-stats-height: 4rem;
 
   /* App size */
-  --fl-app-margin-vertical: 1rem;
-  --fl-app-margin-horizontal: 2rem;
-  --fl-app-margin-horizontal-constant: 32px;
-  --fl-app-margin: calc(var(--fl-app-margin-vertical) * 2)
-    var(--fl-app-margin-horizontal) var(--fl-app-margin-vertical);
-  --fl-app-desktop-width: 500px;
-  --fl-app-full-height: calc(var(--vh, 1vh) * 100);
-  --fl-app-body-height: calc(
-    var(--fl-app-full-height) - calc(var(--fl-app-margin-vertical) * 3)
+  --hls-app-margin-vertical: 1rem;
+  --hls-app-margin-horizontal: 2rem;
+  --hls-app-margin-horizontal-constant: 32px;
+  --hls-app-margin: calc(var(--hls-app-margin-vertical) * 2)
+    var(--hls-app-margin-horizontal) var(--hls-app-margin-vertical);
+  --hls-app-desktop-width: 500px;
+  --hls-app-full-height: calc(var(--vh, 1vh) * 100);
+  --hls-app-body-height: calc(
+    var(--hls-app-full-height) - calc(var(--hls-app-margin-vertical) * 3)
   );
 
   /* App color */
-  --fl-app-background-color: rgba(var(--fl-color-neutral-6), 1);
+  --hls-app-background-color: rgba(var(--hls-color-neutral-6), 1);
 
   /* Button size */
-  --fl-button-height: 3.5rem;
-  --fl-button-border-radius: 0.25rem;
+  --hls-button-height: 3.5rem;
+  --hls-button-border-radius: 0.25rem;
 
   /* Button color - (The rest continues on the exception list) */
-  --fl-button-background-color-primary: rgba(var(--fl-color-primary), 1);
-  --fl-button-background-color-danger: rgba(var(--fl-color-danger), 1);
-  --fl-button-border-primary: solid 0.125rem rgba(var(--fl-color-moon), 0.1);
-  --fl-button-border-secondary: solid 0.125rem rgba(var(--fl-color-moon), 0.1);
-  --fl-button-border-danger: solid 0.125rem rgba(var(--fl-color-moon), 0.1);
+  --hls-button-background-color-primary: rgba(var(--hls-color-primary), 1);
+  --hls-button-background-color-danger: rgba(var(--hls-color-danger), 1);
+  --hls-button-border-primary: solid 0.125rem rgba(var(--hls-color-moon), 0.1);
+  --hls-button-border-secondary: solid 0.125rem rgba(var(--hls-color-moon), 0.1);
+  --hls-button-border-danger: solid 0.125rem rgba(var(--hls-color-moon), 0.1);
 
   /* Header color */
-  --fl-header-shadow-color: rgba(var(--fl-color-black), 0.2);
-  --fl-header-background-color: rgba(var(--fl-color-neutral-6), 1);
+  --hls-header-shadow-color: rgba(var(--hls-color-black), 0.2);
+  --hls-header-background-color: rgba(var(--hls-color-neutral-6), 1);
 
   /* Hint color */
-  --fl-hint-padding: 1rem;
-  --fl-hint-margin: 1rem 0;
-  --fl-hint-border-color: rgba(var(--fl-color-moon), 0.1);
-  --fl-hint-background-color: rgba(var(--fl-color-hint), 1);
+  --hls-hint-padding: 1rem;
+  --hls-hint-margin: 1rem 0;
+  --hls-hint-border-color: rgba(var(--hls-color-moon), 0.1);
+  --hls-hint-background-color: rgba(var(--hls-color-hint), 1);
 
   /* Ripple color - (All in the exception list) */
 
   /* Ripple speed */
-  --fl-ripple-speed-slow: 1s;
-  --fl-ripple-speed-normal: 0.5s;
-  --fl-ripple-speed-fast: 0.25s;
+  --hls-ripple-speed-slow: 1s;
+  --hls-ripple-speed-normal: 0.5s;
+  --hls-ripple-speed-fast: 0.25s;
 
   /* Constant colors */
-  --fl-color-white: 255, 255, 255; // #ffffff
-  --fl-color-black: 0, 0, 0; // #000000
-  --fl-color-gray: 51, 51, 51; // #333333
+  --hls-color-white: 255, 255, 255; // #ffffff
+  --hls-color-black: 0, 0, 0; // #000000
+  --hls-color-gray: 51, 51, 51; // #333333
 }
 
 html[data-theme='light'] {
   /* Exception list */
-  --fl-input-background-color: rgba(var(--fl-color-neutral-6), 1);
-  --fl-chip-background-color: rgba(var(--fl-color-neutral-6), 1);
-  --fl-card-background-color: rgba(var(--fl-color-neutral-6), 1);
-  --fl-button-background-color-secondary: rgba(var(--fl-color-neutral-6), 1);
-  --fl-tooltip-background-color: rgba(var(--fl-color-neutral-6), 1);
-  --fl-ripple-color-primary: rgba(var(--fl-color-neutral-6), 1);
-  --fl-ripple-color-secondary: rgba(var(--fl-color-neutral-5), 1);
+  --hls-input-background-color: rgba(var(--hls-color-neutral-6), 1);
+  --hls-chip-background-color: rgba(var(--hls-color-neutral-6), 1);
+  --hls-card-background-color: rgba(var(--hls-color-neutral-6), 1);
+  --hls-button-background-color-secondary: rgba(var(--hls-color-neutral-6), 1);
+  --hls-tooltip-background-color: rgba(var(--hls-color-neutral-6), 1);
+  --hls-ripple-color-primary: rgba(var(--hls-color-neutral-6), 1);
+  --hls-ripple-color-secondary: rgba(var(--hls-color-neutral-5), 1);
 
   /* Color palette */
-  --fl-color-primary: 0, 145, 255; // #0091FF
-  --fl-color-accent: 0, 224, 98; // #00e062
+  --hls-color-primary: 0, 145, 255; // #0091FF
+  --hls-color-accent: 0, 224, 98; // #00e062
 
-  --fl-color-sun: 255, 255, 255; // #ffffff
-  --fl-color-moon: 0, 0, 0; // #000000
+  --hls-color-sun: 255, 255, 255; // #ffffff
+  --hls-color-moon: 0, 0, 0; // #000000
 
-  --fl-color-neutral-1: 51, 51, 51; // #333333
-  --fl-color-neutral-2: 88, 88, 88; // #585858
-  --fl-color-neutral-3: 135, 135, 135; // #878787
-  --fl-color-neutral-4: 179, 179, 179; // #b3b3b3
-  --fl-color-neutral-5: 214, 214, 214; // #d6d6d6
-  --fl-color-neutral-6: 255, 255, 255; // #ffffff
+  --hls-color-neutral-1: 51, 51, 51; // #333333
+  --hls-color-neutral-2: 88, 88, 88; // #585858
+  --hls-color-neutral-3: 135, 135, 135; // #878787
+  --hls-color-neutral-4: 179, 179, 179; // #b3b3b3
+  --hls-color-neutral-5: 214, 214, 214; // #d6d6d6
+  --hls-color-neutral-6: 255, 255, 255; // #ffffff
 
-  --fl-color-illustration: 243, 243, 243; // #f3f3f3
-  --fl-color-hint: 243, 249, 255; // #f3f9ff
-  --fl-color-info: 0, 145, 255; // #0091FF
-  --fl-color-caution: 255, 207, 0; // #ffcf00
-  --fl-color-warning: 250, 100, 0; // #fa6400
-  --fl-color-danger: 224, 32, 32; // #e02020
-  --fl-color-success: 0, 224, 98; // #00e062
+  --hls-color-illustration: 243, 243, 243; // #f3f3f3
+  --hls-color-hint: 243, 249, 255; // #f3f9ff
+  --hls-color-info: 0, 145, 255; // #0091FF
+  --hls-color-caution: 255, 207, 0; // #ffcf00
+  --hls-color-warning: 250, 100, 0; // #fa6400
+  --hls-color-danger: 224, 32, 32; // #e02020
+  --hls-color-success: 0, 224, 98; // #00e062
 }
 
 html[data-theme='dark'] {
   /* Exception list */
-  --fl-input-background-color: rgba(var(--fl-color-neutral-5), 1);
-  --fl-chip-background-color: rgba(var(--fl-color-neutral-5), 1);
-  --fl-card-background-color: rgba(var(--fl-color-neutral-5), 1);
-  --fl-button-background-color-secondary: rgba(var(--fl-color-neutral-5), 1);
-  --fl-tooltip-background-color: rgba(var(--fl-color-neutral-5), 1);
-  --fl-ripple-color-primary: rgba(var(--fl-color-neutral-3), 1);
-  --fl-ripple-color-secondary: rgba(var(--fl-color-neutral-4), 1);
+  --hls-input-background-color: rgba(var(--hls-color-neutral-5), 1);
+  --hls-chip-background-color: rgba(var(--hls-color-neutral-5), 1);
+  --hls-card-background-color: rgba(var(--hls-color-neutral-5), 1);
+  --hls-button-background-color-secondary: rgba(var(--hls-color-neutral-5), 1);
+  --hls-tooltip-background-color: rgba(var(--hls-color-neutral-5), 1);
+  --hls-ripple-color-primary: rgba(var(--hls-color-neutral-3), 1);
+  --hls-ripple-color-secondary: rgba(var(--hls-color-neutral-4), 1);
 
   /* Color palette */
-  --fl-color-primary: 127, 180, 254; // #7fb4fe
-  --fl-color-accent: 0, 224, 98; // #00e062
+  --hls-color-primary: 127, 180, 254; // #7fb4fe
+  --hls-color-accent: 0, 224, 98; // #00e062
 
-  --fl-color-sun: 0, 0, 0; // #000000
-  --fl-color-moon: 255, 255, 255; // #ffffff
+  --hls-color-sun: 0, 0, 0; // #000000
+  --hls-color-moon: 255, 255, 255; // #ffffff
 
-  --fl-color-neutral-1: 255, 255, 255; // #ffffff
-  --fl-color-neutral-2: 195, 205, 216; // #c3cdd8
-  --fl-color-neutral-3: 96, 123, 147; // #607b93
-  --fl-color-neutral-4: 61, 86, 113; // #3d5671
-  --fl-color-neutral-5: 38, 52, 68; // #263444
-  --fl-color-neutral-6: 23, 38, 55; // #172637
+  --hls-color-neutral-1: 255, 255, 255; // #ffffff
+  --hls-color-neutral-2: 195, 205, 216; // #c3cdd8
+  --hls-color-neutral-3: 96, 123, 147; // #607b93
+  --hls-color-neutral-4: 61, 86, 113; // #3d5671
+  --hls-color-neutral-5: 38, 52, 68; // #263444
+  --hls-color-neutral-6: 23, 38, 55; // #172637
 
-  --fl-color-illustration: 46, 60, 75; // #2E3C4B
-  --fl-color-hint: 62, 88, 111; // #f3f9ff
-  --fl-color-info: 127, 180, 254; // #7fb4fe
-  --fl-color-caution: 255, 207, 0; // #ffcf00
-  --fl-color-warning: 255, 152, 83; // #ff9853
-  --fl-color-danger: 224, 88, 88; // #fe5d54
-  --fl-color-success: 0, 224, 98; // #00e062
+  --hls-color-illustration: 46, 60, 75; // #2E3C4B
+  --hls-color-hint: 62, 88, 111; // #f3f9ff
+  --hls-color-info: 127, 180, 254; // #7fb4fe
+  --hls-color-caution: 255, 207, 0; // #ffcf00
+  --hls-color-warning: 255, 152, 83; // #ff9853
+  --hls-color-danger: 224, 88, 88; // #fe5d54
+  --hls-color-success: 0, 224, 98; // #00e062
 }
