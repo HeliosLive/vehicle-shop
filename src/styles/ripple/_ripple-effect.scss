@@ -1,0 +1,41 @@
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.5;
+  transform: scale(0);
+  animation-name: ripple;
+  animation-timing-function: linear;
+
+  &-container {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  &.primary {
+    background-color: var(--fl-ripple-color-primary);
+  }
+
+  &.secondary {
+    background-color: var(--fl-ripple-color-secondary);
+  }
+
+  &.slow {
+    animation-duration: var(--fl-ripple-speed-slow);
+  }
+
+  &.normal {
+    animation-duration: var(--fl-ripple-speed-normal);
+  }
+
+  &.fast {
+    animation-duration: var(--fl-ripple-speed-fast);
+  }
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
