@@ -5,7 +5,17 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development"
+    "build:prod": "ng build -c=production",
+    "watch": "ng build --watch --configuration development",
+    "test": "jest",
+    "test:coverage": "jest --coverage --silent",
+    "test:changed": "ng test --onlyChanged",
+    "test:watch": "jest --watch",
+    "jest:clear": "jest --clearCache",
+    "test:ci": "jest --runInBand --coverage --reporters=default --reporters=jest-junit --silent",
+    "postinstall": "ngcc",
+    "lint": "ng lint",
+    "syncscript": "node sync.js"
   },
   "private": true,
   "dependencies": {
