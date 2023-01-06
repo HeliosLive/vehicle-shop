@@ -44,5 +44,13 @@
     "jest-sonar-reporter": "2.0.0",
     "ng-mocks": "14.5.1",
     "typescript": "4.8.2"
+  },
+  "jest-junit": {
+    "outputDirectory": "./junit"
+  },
+  "jestSonar": {
+    "reportPath": "coverage/sonarqube-report",
+    "reportFile": "sonarqube-report.xml",
+    "indent": 4
   }
 }
