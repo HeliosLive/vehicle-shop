@@ -10,3 +10,11 @@
 <button hls-button-flat>hls flat button</button>
 <button hls-button-raised>hls raised button</button>
 <button hls-button-stroked>hls stroked button</button>
+
+<hls-label for="types">select a type</hls-label>
+<select hls-select name="types" id="types">
+    <option hls-option value="" [disabled]="true" selected>Choose an option</option>
+    <option hls-option value="car">car</option>
+    <option hls-option value="train">train</option>
+    <option hls-option value="airplane">airplane</option>
+</select>

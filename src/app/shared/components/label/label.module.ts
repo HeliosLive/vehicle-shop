@@ -6,4 +6,4 @@ import { LabelComponent } from './label.component';
   declarations: [LabelComponent],
   exports: [LabelComponent],
 })
-export class HLSLabelModule {}
+export class HlsLabelModule {}

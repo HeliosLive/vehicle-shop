@@ -83,7 +83,7 @@
   --hls-app-background-color: rgba(var(--hls-color-neutral-6), 1);
 
   /* Button size */
-  --hls-button-height: 3.5rem;
+  --hls-button-height: 2.5rem;
   --hls-button-border-radius: 0.25rem;
 
   /* Button color - (The rest continues on the exception list) */
@@ -109,6 +109,26 @@
   --hls-ripple-speed-slow: 1s;
   --hls-ripple-speed-normal: 0.5s;
   --hls-ripple-speed-fast: 0.25s;
+
+  /* Select size */
+  --hls-select-height: 2.5rem;
+  --hls-select-border-radius: 0.25rem;
+  --hls-select-padding: 0.3em 0.6em;
+
+  /* Select color */
+  --hls-select-box-shadow: rgba(var(--hls-color-neutral-4), 0.3);
+  --hls-select-border: solid 0.125rem rgba(var(--hls-color-moon), 0.15);
+  --hls-select-border-focus: solid 0.125rem rgba(var(--hls-color-info), 0.5);
+  --hls-select-border-danger: solid 0.125rem rgba(var(--hls-color-danger), 0.3);
+  --hls-select-color-primary: rgba(var(--hls-color-primary), 1);
+  --hls-select-color-secondary: rgba(var(--hls-color-neutral-1), 1);
+  --hls-select-color-danger: rgba(var(--hls-color-danger), 1);
+  --hls-select-background-color-primary: rgba(var(--hls-color-primary), 0.1);
+  --hls-select-background-color-secondary: rgba(
+    var(--hls-color-neutral-6),
+    0.5
+  );
+  --hls-select-background-color-danger: rgba(var(--hls-color-danger), 0.1);
 
   /* Constant colors */
   --hls-color-white: 255, 255, 255; // #ffffff

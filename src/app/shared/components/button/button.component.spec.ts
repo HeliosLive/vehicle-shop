@@ -6,9 +6,9 @@ import {
 } from '@ngneat/spectator/jest';
 import { MockComponent } from 'ng-mocks';
 
-import type { ButtonColor } from './button.component';
 import { ButtonComponent } from './button.component';
 
+import type { Color } from '@shared/models/color.type';
 import type { LabelColor } from '@shared/components/label/label.component';
 import { LabelComponent } from '@shared/components/label/label.component';
 
@@ -100,11 +100,11 @@ describe('Button', () => {
 
   describe('ButtonComponent', () => {
     const props = {
-      color: 'primary' as ButtonColor,
+      color: 'primary' as Color,
       disabled: false,
       testId: 'button-test-id',
     };
-    const labelColorMatch: Record<ButtonColor, LabelColor> = {
+    const labelColorMatch: Record<Color, LabelColor> = {
       primary: 'sun',
       secondary: 'info',
       danger: 'white',
@@ -139,7 +139,7 @@ describe('Button', () => {
     describe('label', () => {
       for (let [key, value] of Object.entries(labelColorMatch)) {
         it(`should label color equals to ${value} when button type is ${key}`, () => {
-          spectator.component.color = key as ButtonColor;
+          spectator.component.color = key as Color;
           spectator.detectChanges();
           spectator.detectComponentChanges();
 

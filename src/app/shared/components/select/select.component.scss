@@ -1,0 +1,33 @@
+:host {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: var(--hls-select-padding);
+  height: var(--hls-select-height);
+  border: var(--hls-select-border);
+  border-radius: var(--hls-select-border-radius);
+  box-shadow: inset 0 1px 2px var(--hls-select-box-shadow);
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+
+  &[fullWidth='true'] {
+    width: 100%;
+  }
+
+  &:focus-visible {
+    border: var(--hls-select-border-focus);
+  }
+
+  $colors: primary, secondary, danger;
+  @each $color in $colors {
+    &[color='#{$color}'] {
+      color: var(--hls-select-color-#{$color});
+      background-color: var(--hls-select-background-color-#{$color});
+    }
+  }
+
+  &.hls-select-disabled {
+    cursor: default;
+    pointer-events: none;
+  }
+}

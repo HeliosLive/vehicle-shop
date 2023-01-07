@@ -10,8 +10,8 @@ import {
 
 import type { LabelColor } from '@shared/components/label/label.component';
 import { RippleDirective } from '@shared/directives/ripple.directive';
-
-export type ButtonColor = 'primary' | 'secondary' | 'danger';
+import type { Color } from '@shared/models/color.type';
+import { checkHtmlElementAttributes } from '@shared/helpers/element-attribute-check';
 
 const BUTTON_HOST_ATTRIBUTES = [
   'hls-button',
@@ -35,7 +35,7 @@ const BUTTON_HOST_ATTRIBUTES = [
 export class ButtonComponent implements OnInit {
   @Input()
   @HostBinding('attr.color')
-  color: ButtonColor = 'primary';
+  color: Color = 'primary';
   @Input()
   @HostBinding('attr.data-cy')
   testId?: string;
@@ -47,7 +47,10 @@ export class ButtonComponent implements OnInit {
   constructor(private elementRef: ElementRef) {}
 
   ngOnInit(): void {
-    this.checkButtonAttributes();
+    checkHtmlElementAttributes(
+      BUTTON_HOST_ATTRIBUTES,
+      this.elementRef.nativeElement
+    );
   }
 
   get labelColor(): LabelColor {
@@ -59,24 +62,6 @@ export class ButtonComponent implements OnInit {
       case 'danger':
         return 'white';
     }
-  }
-
-  private checkButtonAttributes(): void {
-    for (const attr of BUTTON_HOST_ATTRIBUTES) {
-      if (this.hasHostAttributes(attr)) {
-        this.getHostElement().classList.add(attr);
-      }
-    }
-  }
-
-  private hasHostAttributes(...attributes: string[]): boolean {
-    return attributes.some((attribute) =>
-      this.getHostElement().hasAttribute(attribute)
-    );
-  }
-
-  private getHostElement(): HTMLElement {
-    return this.elementRef.nativeElement;
   }
 
   @HostListener('pointerdown', ['$event']) onPointerDownHandler(

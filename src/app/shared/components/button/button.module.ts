@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 
 import { ButtonComponent } from './button.component';
 
-import { HLSLabelModule } from '../label/label.module';
+import { HlsLabelModule } from '../label/label.module';
 
 @NgModule({
   declarations: [ButtonComponent],
-  imports: [HLSLabelModule],
+  imports: [HlsLabelModule],
   exports: [ButtonComponent],
 })
-export class HLSButtonModule {}
+export class HlsButtonModule {}

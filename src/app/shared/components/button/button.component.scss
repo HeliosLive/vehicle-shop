@@ -17,15 +17,7 @@
   $colors: primary, secondary, danger;
   @each $color in $colors {
     &[color='#{$color}'] {
-      &.hls-button,
-      &.hls-button-stroked {
-        color: var(--hls-button-background-color-#{$color});
-      }
-
-      &.hls-button-flat,
-      &.hls-button-raised {
-        background-color: var(--hls-button-background-color-#{$color});
-      }
+      background-color: var(--hls-button-background-color-#{$color});
     }
   }
 

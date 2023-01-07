@@ -1,0 +1,17 @@
+:host {
+  cursor: pointer;
+
+  $colors: primary, secondary, danger;
+  @each $color in $colors {
+    &[color='#{$color}'] {
+      &.hls-option {
+        color: var(--hls-select-color-#{$color});
+        background-color: var(--hls-select-background-color-#{$color});
+      }
+    }
+  }
+
+  &.hls-option-disabled {
+    display: none;
+  }
+}
