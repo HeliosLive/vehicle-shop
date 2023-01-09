@@ -21,7 +21,7 @@ import type { Color } from '@shared/models/color.type';
 export class OptionComponent {
   @Input()
   @HostBinding('attr.color')
-  color: Color = 'primary';
+  color: Color = 'secondary';
   @Input()
   @HostBinding('attr.data-cy')
   testId?: string;

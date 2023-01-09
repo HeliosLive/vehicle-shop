@@ -11,10 +11,26 @@
 <button hls-button-raised>hls raised button</button>
 <button hls-button-stroked>hls stroked button</button>
 
-<hls-label for="types">select a type</hls-label>
-<select hls-select name="types" id="types">
-    <option hls-option value="" [disabled]="true" selected>Choose an option</option>
-    <option hls-option value="car">car</option>
-    <option hls-option value="train">train</option>
-    <option hls-option value="airplane">airplane</option>
-</select>
+<ng-container *ngIf="type$ | async as types">
+    <hls-label for="type">select a type</hls-label>
+    <select hls-select name="type" id="type">
+        <option hls-option value="" [disabled]="true" selected>Choose an option</option>
+        <option *ngFor="let type of types" hls-option [value]="type">{{type}}</option>
+    </select>
+</ng-container>
+
+<ng-container *ngIf="brand$ | async as brands">
+    <hls-label for="brands">select a brand</hls-label>
+    <select hls-select name="brand" id="brand">
+        <option hls-option value="" [disabled]="true" selected>Choose an option</option>
+        <option *ngFor="let brand of brands" hls-option [value]="brand">{{brand}}</option>
+    </select>
+</ng-container>
+
+<ng-container *ngIf="colors$ | async as colors">
+    <hls-label for="colors">select a color</hls-label>
+    <select hls-select name="colors" id="colors">
+        <option hls-option value="" [disabled]="true" selected>Choose an option</option>
+        <option *ngFor="let color of colors" hls-option [value]="color">{{color}}</option>
+    </select>
+</ng-container>
