@@ -1,1 +1,24 @@
-<p>summary works!</p>
+<ng-container *ngIf="vehicle$ | async as vehicle; else emptyTemp">
+    <hls-label size="h3" color="info" testId="congratulations-label">Congratulations!</hls-label>
+    <div class="info">
+        <img [src]="vehicle.img" [alt]="vehicle.brand" />
+        <hls-label size="subheading-2" color="neutral-3">You've chosen {{ vehicle.color }} {{ vehicle.brand }}
+        </hls-label>
+    </div>
+</ng-container>
+
+<!-- 
+    We also could've implemented a guard to redirect when there is no selection.
+    However, we should inform the user when they want to access this path.
+    Notification is needed for that. Due to limited time, this usage is more than enough  
+-->
+<ng-template #emptyTemp>
+    <hls-label size="h4" color="danger">No item found!</hls-label>
+
+    <div class="infos">
+        <hls-label size="subheading-2" color="info">Please go back to home and choose a vehicle.</hls-label>
+        <button hls-button-raised color="danger" testId="navigate-button" (click)="onClick()">
+            Go to Home
+        </button>
+    </div>
+</ng-template>

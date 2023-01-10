@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import { Observable, Subject, take, takeUntil, tap } from 'rxjs';
 
@@ -36,6 +37,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   destroy$ = new Subject<void>();
 
   constructor(
+    private router: Router,
     private readonly vehicleHttpService: VehicleHttpService,
     private readonly vehicleService: VehicleService
   ) {}
@@ -53,7 +55,10 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   onSubmit(): void {
     if (this.vehicleForm.valid) {
-      console.log(this.vehicleForm.value);
+      this.vehicleService.select(
+        assertTypeMapper<Vehicle>(this.vehicleForm.value)
+      );
+      this.router.navigateByUrl('summary');
     }
   }
 

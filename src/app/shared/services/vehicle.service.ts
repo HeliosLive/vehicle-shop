@@ -10,12 +10,11 @@ import type { Vehicles, Vehicle } from '@shared/models/vehicle.interface';
 export class VehicleService {
   /**
    * We could also use ngrx for the state.
-   * However, this kind of a state in a small app
-   * I wouldn't recommend that approach.
+   * However, this kind of a state in a small app is also okay.
    */
   private data: Vehicles[] = [];
 
-  private selection = new BehaviorSubject<Vehicles | undefined>(undefined);
+  private selection = new BehaviorSubject<Vehicle | undefined>(undefined);
   selection$ = this.selection.asObservable();
 
   private vehicleType = new BehaviorSubject<Vehicles['type'][]>([]);
@@ -40,7 +39,11 @@ export class VehicleService {
         datum.colors.includes(value.color)
     );
 
-    this.selection.next(vehicle);
+    if (vehicle) {
+      const { colors, ...rest } = vehicle;
+
+      this.selection.next({ ...rest, color: value.color });
+    }
   }
 
   filter(value: Partial<Vehicle>): void {

@@ -18,6 +18,7 @@ export class ControlValueAccessorConnector implements ControlValueAccessor {
   @Input()
   formControlName!: string;
 
+  /* istanbul ignore next */
   get control() {
     return (
       this.formControl ||
@@ -27,6 +28,7 @@ export class ControlValueAccessorConnector implements ControlValueAccessor {
 
   constructor(private injector: Injector) {}
 
+  /* istanbul ignore next */
   get controlContainer() {
     return this.injector.get(ControlContainer);
   }

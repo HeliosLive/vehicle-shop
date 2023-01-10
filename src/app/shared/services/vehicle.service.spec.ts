@@ -21,7 +21,7 @@ describe('VehicleService', () => {
   });
 
   describe('set', () => {
-    beforeAll(() => {
+    beforeEach(() => {
       spectator.service.set(VEHICLE_DATA);
     });
 
@@ -57,7 +57,52 @@ describe('VehicleService', () => {
     });
   });
 
+  describe('filter', () => {
+    beforeEach(() => {
+      spectator.service.set(VEHICLE_DATA);
+    });
+
+    it('should filter the data from the source and assign the correct properties', () => {
+      const { type, brand, colors } = VEHICLE_DATA[0];
+      const value: Partial<Vehicle> = { type, brand, color: colors[0] };
+
+      let filteredData = VEHICLE_DATA;
+      filteredData = filteredData
+        .filter((datum: Vehicles) => datum.type === type)
+        .filter((datum: Vehicles) => datum.brand === brand)
+        .filter((datum: Vehicles) => datum.colors.includes(colors[0]));
+
+      spectator.service.filter(value);
+
+      const typeExpectation = filteredData.map((value: Vehicles) => value.type);
+      const brandExpectation = filteredData.map(
+        (value: Vehicles) => value.brand
+      );
+      const colorsExpectation = filteredData
+        .map((value: Vehicles) => value.colors)
+        .flat(1);
+
+      spectator.service.vehicleType$.subscribe((value: Vehicles['type'][]) => {
+        expect(value).toEqual(typeExpectation);
+      });
+      spectator.service.vehicleBrand$.subscribe(
+        (value: Vehicles['brand'][]) => {
+          expect(value).toEqual(brandExpectation);
+        }
+      );
+      spectator.service.vehicleColors$.subscribe(
+        (value: Vehicles['colors']) => {
+          expect(value).toEqual(colorsExpectation);
+        }
+      );
+    });
+  });
+
   describe('select', () => {
+    beforeEach(() => {
+      spectator.service.set(VEHICLE_DATA);
+    });
+
     it('should set the selected vehicle correctly if it exists', () => {
       const { type, brand, colors } = VEHICLE_DATA[0];
       const vehicle: Vehicle = {
@@ -67,7 +112,7 @@ describe('VehicleService', () => {
       };
       spectator.service.select(vehicle);
 
-      spectator.service.selection$.subscribe((value: Vehicles | undefined) => {
+      spectator.service.selection$.subscribe((value: Vehicle | undefined) => {
         expect(value).toEqual(VEHICLE_DATA[0]);
       });
     });
@@ -80,7 +125,7 @@ describe('VehicleService', () => {
       };
       spectator.service.select(vehicle);
 
-      spectator.service.selection$.subscribe((value: Vehicles | undefined) => {
+      spectator.service.selection$.subscribe((value: Vehicle | undefined) => {
         expect(value).toEqual(undefined);
       });
     });

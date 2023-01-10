@@ -19,6 +19,7 @@ module.exports = {
     '!**/src/main.ts',
     '!**/src/jestGlobalMocks.ts',
     '!**/src/**/*.module.ts',
+    '!**/src/app/core/svg-register/**',
     '!**/src/app/shared/models/**',
     '!**/src/app/shared/helpers/**',
     '!test/**',
