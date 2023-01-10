@@ -130,6 +130,12 @@
   );
   --hls-select-background-color-danger: rgba(var(--hls-color-danger), 0.1);
 
+  /* Svg color - (The rest continues on the exception list)*/
+  --hls-svg-info-color-primary: rgba(var(--hls-color-primary), 1);
+  --hls-svg-info-color-secondary: rgba(var(--hls-color-neutral-6), 1);
+  --hls-svg-error-color-primary: rgba(var(--hls-color-space), 1);
+  --hls-svg-error-color-secondary: rgba(var(--hls-color-ink), 1);
+
   /* Constant colors */
   --hls-color-white: 255, 255, 255; // #ffffff
   --hls-color-black: 0, 0, 0; // #000000
@@ -165,6 +171,8 @@ html[data-theme='light'] {
   --hls-color-illustration: 243, 243, 243; // #f3f3f3
   --hls-color-hint: 243, 249, 255; // #f3f9ff
   --hls-color-info: 0, 145, 255; // #0091FF
+  --hls-color-space: 112, 92, 143; // #413650
+  --hls-color-ink: 68, 47, 134; // #442F86
   --hls-color-caution: 255, 207, 0; // #ffcf00
   --hls-color-warning: 250, 100, 0; // #fa6400
   --hls-color-danger: 224, 32, 32; // #e02020
@@ -200,6 +208,8 @@ html[data-theme='dark'] {
   --hls-color-illustration: 46, 60, 75; // #2E3C4B
   --hls-color-hint: 62, 88, 111; // #f3f9ff
   --hls-color-info: 127, 180, 254; // #7fb4fe
+  --hls-color-space: 187, 134, 252; // #BB86FC
+  --hls-color-ink: 139, 105, 245; // #442F86
   --hls-color-caution: 255, 207, 0; // #ffcf00
   --hls-color-warning: 255, 152, 83; // #ff9853
   --hls-color-danger: 224, 88, 88; // #fe5d54

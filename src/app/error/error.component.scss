@@ -1,0 +1,25 @@
+:host {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-areas:
+    'svg svg svg'
+    '. description .'
+    '. button .';
+  grid-template-rows: 4fr auto 1fr;
+  height: calc(var(--vh, 1vh) * 100);
+  width: 100%;
+
+  svg-icon {
+    grid-area: svg;
+    width: calc(var(--vw, 1vw) * 70);
+  }
+
+  .description {
+    grid-area: description;
+  }
+
+  button {
+    grid-area: button;
+  }
+}

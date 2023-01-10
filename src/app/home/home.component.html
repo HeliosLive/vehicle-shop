@@ -28,6 +28,6 @@
         </select>
     </div>
 
-    <button hls-button-raised type="submit" [disabled]="!vehicleForm.valid">submit</button>
-    <button hls-button-raised type="reset" color="danger" [fullWidth]="false">reset</button>
+    <button hls-button-raised type="submit" [disabled]="!vehicleForm.valid" testId="submit-button">submit</button>
+    <button hls-button-flat type="reset" color="danger" [fullWidth]="false" testId="reset-button">reset</button>
 </form>
