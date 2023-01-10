@@ -28,6 +28,12 @@
         </select>
     </div>
 
-    <button hls-button-raised type="submit" [disabled]="!vehicleForm.valid" testId="submit-button">submit</button>
-    <button hls-button-flat type="reset" color="danger" [fullWidth]="false" testId="reset-button">reset</button>
+    <div class="info">
+        <svg-icon name="info" class="info__icon"> </svg-icon>
+        <hls-label size="p1" color="info">All filters are connected to each other.</hls-label>
+    </div>
+
+    <button hls-button-raised type="submit" [disabled]="!vehicleForm.valid" testId="submit-button">Submit</button>
+    <button hls-button-flat type="reset" color="danger" [fullWidth]="false" testId="reset-button">Restart the
+        selection</button>
 </form>

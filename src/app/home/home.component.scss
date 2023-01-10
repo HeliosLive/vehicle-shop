@@ -7,5 +7,14 @@
     display: grid;
     gap: 1rem;
     text-align: start;
+
+    .info {
+      display: flex;
+      align-items: center;
+
+      &__icon {
+        width: 1rem;
+      }
+    }
   }
 }
