@@ -80,7 +80,7 @@
   );
 
   /* App color */
-  --hls-app-background-color: rgba(var(--hls-color-neutral-6), 1);
+  --hls-app-background-color: rgba(var(--hls-color-ghost), 1);
 
   /* Button size */
   --hls-button-height: 2.5rem;
@@ -153,6 +153,8 @@ html[data-theme='light'] {
   --hls-color-sun: 255, 255, 255; // #ffffff
   --hls-color-moon: 0, 0, 0; // #000000
 
+  --hls-color-ghost: 241, 241, 250; // #f1f1fa
+
   --hls-color-neutral-1: 51, 51, 51; // #333333
   --hls-color-neutral-2: 88, 88, 88; // #585858
   --hls-color-neutral-3: 135, 135, 135; // #878787
@@ -185,6 +187,8 @@ html[data-theme='dark'] {
 
   --hls-color-sun: 0, 0, 0; // #000000
   --hls-color-moon: 255, 255, 255; // #ffffff
+
+  --hls-color-ghost: 23, 38, 65; // #172641
 
   --hls-color-neutral-1: 255, 255, 255; // #ffffff
   --hls-color-neutral-2: 195, 205, 216; // #c3cdd8

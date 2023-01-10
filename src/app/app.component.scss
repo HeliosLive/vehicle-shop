@@ -1,0 +1,13 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--hls-app-full-height);
+  margin: 0 var(--hls-app-margin-horizontal);
+  overflow: auto;
+  text-align: center;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

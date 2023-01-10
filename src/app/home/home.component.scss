@@ -1,0 +1,11 @@
+:host {
+  display: grid;
+  height: 100%;
+  align-content: space-evenly;
+
+  form {
+    display: grid;
+    gap: 1rem;
+    text-align: start;
+  }
+}
