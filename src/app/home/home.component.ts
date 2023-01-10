@@ -1,20 +1,39 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
-import { Observable, take, tap } from 'rxjs';
+import { Observable, Subject, take, takeUntil, tap } from 'rxjs';
 
-import type { Vehicle } from '@shared/models/vehicle.interface';
+import type { Vehicles, Vehicle } from '@shared/models/vehicle.interface';
 import { VehicleHttpService } from '@shared/services/vehicle-http.service';
 import { VehicleService } from '@shared/services/vehicle.service';
+import { assertTypeMapper } from '@shared/helpers/assert-type-mapper';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements OnInit {
-  type$!: Observable<Vehicle['type'][]>;
-  brand$!: Observable<Vehicle['brand'][]>;
-  colors$!: Observable<Vehicle['colors']>;
+export class HomeComponent implements OnInit, OnDestroy {
+  type$!: Observable<Vehicles['type'][]>;
+  brand$!: Observable<Vehicles['brand'][]>;
+  colors$!: Observable<Vehicles['colors']>;
+
+  vehicleForm = new FormGroup({
+    type: new FormControl<string | null>(null, {
+      validators: [Validators.required],
+      updateOn: 'change',
+    }),
+    brand: new FormControl<string | null>(null, {
+      validators: [Validators.required],
+      updateOn: 'change',
+    }),
+    color: new FormControl<string | null>(null, {
+      validators: [Validators.required],
+      updateOn: 'change',
+    }),
+  });
+
+  destroy$ = new Subject<void>();
 
   constructor(
     private readonly vehicleHttpService: VehicleHttpService,
@@ -22,16 +41,24 @@ export class HomeComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.vehicleHttpService
-      .get()
-      .pipe(
-        tap((value) => {
-          this.vehicleService.set(value);
-          this.assignObsValues();
-        }),
-        take(1) // only one fetch is enough otherwise we can use takeUntil
-      )
-      .subscribe();
+    this.assignObsValues();
+    this.fetchData();
+    this.updateFilters();
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
+  }
+
+  onSubmit(): void {
+    if (this.vehicleForm.valid) {
+      console.log(this.vehicleForm.value);
+    }
+  }
+
+  onReset(): void {
+    this.vehicleForm.reset();
   }
 
   private assignObsValues(): void {
@@ -39,5 +66,30 @@ export class HomeComponent implements OnInit {
     this.type$ = vehicleType$;
     this.brand$ = vehicleBrand$;
     this.colors$ = vehicleColors$;
+  }
+
+  private fetchData(): void {
+    this.vehicleHttpService
+      .get()
+      .pipe(
+        tap((value) => {
+          this.vehicleService.set(value);
+        }),
+        take(1)
+      )
+      .subscribe();
+  }
+
+  private updateFilters(): void {
+    this.vehicleForm.valueChanges
+      .pipe(
+        takeUntil(this.destroy$),
+        tap((value) => {
+          if (value) {
+            this.vehicleService.filter(assertTypeMapper<Vehicle>(value));
+          }
+        })
+      )
+      .subscribe();
   }
 }

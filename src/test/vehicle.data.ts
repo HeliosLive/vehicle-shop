@@ -1,6 +1,6 @@
-import type { Vehicle } from '@shared/models/vehicle.interface';
+import type { Vehicles } from '@shared/models/vehicle.interface';
 
-export const VEHICLE_DATA: Vehicle[] = [
+export const VEHICLE_DATA: Vehicles[] = [
   {
     id: 1,
     type: 'car',

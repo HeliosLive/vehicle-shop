@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="8" failures="0" errors="0" time="4.633">
-  <testsuite name="Option" errors="0" failures="0" skipped="0" timestamp="2023-01-09T17:48:04" time="3.883" tests="8">
-    <testcase classname="Option OptionComponentHost content projection should Host text content equals to content projection value" name="Option OptionComponentHost content projection should Host text content equals to content projection value" time="0.05">
+<testsuites name="jest tests" tests="6" failures="0" errors="0" time="4.235">
+  <testsuite name="VehicleService" errors="0" failures="0" skipped="0" timestamp="2023-01-09T18:27:12" time="3.573" tests="6">
+    <testcase classname="VehicleService should create" name="VehicleService should create" time="0.01">
     </testcase>
-    <testcase classname="Option OptionComponentHost disabled should Host disabled attr does not exist if disabled input is not passed" name="Option OptionComponentHost disabled should Host disabled attr does not exist if disabled input is not passed" time="0.024">
+    <testcase classname="VehicleService set should set all vehicle types correctly" name="VehicleService set should set all vehicle types correctly" time="0.015">
     </testcase>
-    <testcase classname="Option OptionComponentHost disabled should Host disabled attr does not exist if disabled input is false" name="Option OptionComponentHost disabled should Host disabled attr does not exist if disabled input is false" time="0.011">
+    <testcase classname="VehicleService set should set all vehicle brands correctly" name="VehicleService set should set all vehicle brands correctly" time="0.004">
     </testcase>
-    <testcase classname="Option OptionComponentHost disabled should Host disabled attr exist if disabled input is true" name="Option OptionComponentHost disabled should Host disabled attr exist if disabled input is true" time="0.009">
+    <testcase classname="VehicleService set should set all vehicle colors correctly" name="VehicleService set should set all vehicle colors correctly" time="0.004">
     </testcase>
-    <testcase classname="Option OptionComponentHost disabled should Host hls-option-disabled class exist if disabled input is true" name="Option OptionComponentHost disabled should Host hls-option-disabled class exist if disabled input is true" time="0.015">
+    <testcase classname="VehicleService select should set the selected vehicle correctly if it exists" name="VehicleService select should set the selected vehicle correctly if it exists" time="0.01">
     </testcase>
-    <testcase classname="Option OptionComponentHost disabled should Host hls-option-disabled class does not exist if disabled input is false" name="Option OptionComponentHost disabled should Host hls-option-disabled class does not exist if disabled input is false" time="0.008">
-    </testcase>
-    <testcase classname="Option OptionComponent should Host color attr equals to color input" name="Option OptionComponent should Host color attr equals to color input" time="0.011">
-    </testcase>
-    <testcase classname="Option OptionComponent should Host data-cy attr equals to testId input" name="Option OptionComponent should Host data-cy attr equals to testId input" time="0.015">
+    <testcase classname="VehicleService select should set the selected vehicle as undefined if it does not exist" name="VehicleService select should set the selected vehicle as undefined if it does not exist" time="0.005">
     </testcase>
   </testsuite>
 </testsuites>

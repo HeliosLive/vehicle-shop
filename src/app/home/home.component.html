@@ -1,36 +1,31 @@
-<p>home works!</p>
+ <form novalidate autocomplete="off" [formGroup]="vehicleForm" (ngSubmit)="onSubmit()" (reset)="onReset()">
+     <ng-container *ngIf="type$ | async as types">
+         <hls-label for="type">select a type</hls-label>
+         <select hls-select name="type" id="type" formControlName="type">
+             <option hls-option value="null" [disabled]="true" selected>Choose an option</option>
+             <option *ngFor="let type of types" hls-option [value]="type">{{type}}
+             </option>
+         </select>
+     </ng-container>
 
-<hls-label>this is a label</hls-label>
+     <ng-container *ngIf="brand$ | async as brands">
+         <hls-label for="brand">select a brand</hls-label>
+         <select hls-select name="brand" id="brand" formControlName="brand">
+             <option hls-option value="null" [disabled]="true" selected>Choose an option</option>
+             <option *ngFor="let brand of brands" hls-option [value]="brand">{{brand}}
+             </option>
+         </select>
+     </ng-container>
 
-<input type="text" name="name" id="name">
-<hls-label for="name">this is a label for input</hls-label>
+     <ng-container *ngIf="colors$ | async as colors">
+         <hls-label for="color">select a color</hls-label>
+         <select hls-select name="color" id="color" formControlName="color">
+             <option hls-option value="null" [disabled]="true" selected>Choose an option</option>
+             <option *ngFor="let color of colors" hls-option [value]="color">{{color}}
+             </option>
+         </select>
+     </ng-container>
 
-<button>default button</button>
-<button hls-button>hls button</button>
-<button hls-button-flat>hls flat button</button>
-<button hls-button-raised>hls raised button</button>
-<button hls-button-stroked>hls stroked button</button>
-
-<ng-container *ngIf="type$ | async as types">
-    <hls-label for="type">select a type</hls-label>
-    <select hls-select name="type" id="type">
-        <option hls-option value="" [disabled]="true" selected>Choose an option</option>
-        <option *ngFor="let type of types" hls-option [value]="type">{{type}}</option>
-    </select>
-</ng-container>
-
-<ng-container *ngIf="brand$ | async as brands">
-    <hls-label for="brands">select a brand</hls-label>
-    <select hls-select name="brand" id="brand">
-        <option hls-option value="" [disabled]="true" selected>Choose an option</option>
-        <option *ngFor="let brand of brands" hls-option [value]="brand">{{brand}}</option>
-    </select>
-</ng-container>
-
-<ng-container *ngIf="colors$ | async as colors">
-    <hls-label for="colors">select a color</hls-label>
-    <select hls-select name="colors" id="colors">
-        <option hls-option value="" [disabled]="true" selected>Choose an option</option>
-        <option *ngFor="let color of colors" hls-option [value]="color">{{color}}</option>
-    </select>
-</ng-container>
+     <button hls-button-raised type="submit" [disabled]="!vehicleForm.valid">submit</button>
+     <button hls-button-raised type="reset" color="danger" [fullWidth]="false">reset</button>
+ </form>

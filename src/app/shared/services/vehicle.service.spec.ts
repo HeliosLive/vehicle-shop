@@ -2,10 +2,7 @@ import { createServiceFactory, SpectatorService } from '@ngneat/spectator/jest';
 
 import { VehicleService } from './vehicle.service';
 
-import type {
-  Vehicle,
-  VehicleFormData,
-} from '@shared/models/vehicle.interface';
+import type { Vehicles, Vehicle } from '@shared/models/vehicle.interface';
 import { VEHICLE_DATA } from '@test/vehicle.data';
 
 describe('VehicleService', () => {
@@ -29,57 +26,61 @@ describe('VehicleService', () => {
     });
 
     it('should set all vehicle types correctly', () => {
-      const types = VEHICLE_DATA.map((value: Vehicle) => value.type);
+      const types = VEHICLE_DATA.map((value: Vehicles) => value.type);
       const expectation = [...new Set(types)];
 
-      spectator.service.vehicleType$.subscribe((value: Vehicle['type'][]) => {
+      spectator.service.vehicleType$.subscribe((value: Vehicles['type'][]) => {
         expect(value).toEqual(expectation);
       });
     });
 
     it('should set all vehicle brands correctly', () => {
-      const brands = VEHICLE_DATA.map((value: Vehicle) => value.brand);
+      const brands = VEHICLE_DATA.map((value: Vehicles) => value.brand);
       const expectation = [...new Set(brands)];
 
-      spectator.service.vehicleBrand$.subscribe((value: Vehicle['brand'][]) => {
-        expect(value).toEqual(expectation);
-      });
+      spectator.service.vehicleBrand$.subscribe(
+        (value: Vehicles['brand'][]) => {
+          expect(value).toEqual(expectation);
+        }
+      );
     });
 
     it('should set all vehicle colors correctly', () => {
-      const colors = VEHICLE_DATA.map((value: Vehicle) => value.colors);
+      const colors = VEHICLE_DATA.map((value: Vehicles) => value.colors);
       const expectation = [...new Set(colors)];
 
-      spectator.service.vehicleColors$.subscribe((value: Vehicle['colors']) => {
-        expect(value).toEqual(expectation);
-      });
+      spectator.service.vehicleColors$.subscribe(
+        (value: Vehicles['colors']) => {
+          expect(value).toEqual(expectation);
+        }
+      );
     });
   });
 
   describe('select', () => {
     it('should set the selected vehicle correctly if it exists', () => {
       const { type, brand, colors } = VEHICLE_DATA[0];
-      const vehicle: VehicleFormData = {
+      const vehicle: Vehicle = {
         type,
         brand,
         color: colors[0],
       };
       spectator.service.select(vehicle);
 
-      spectator.service.selection$.subscribe((value: Vehicle | undefined) => {
+      spectator.service.selection$.subscribe((value: Vehicles | undefined) => {
         expect(value).toEqual(VEHICLE_DATA[0]);
       });
     });
 
     it('should set the selected vehicle as undefined if it does not exist', () => {
-      const vehicle: VehicleFormData = {
+      const vehicle: Vehicle = {
         type: 'test invalid type',
         brand: 'test invalid brand',
         color: 'test invalid color',
       };
       spectator.service.select(vehicle);
 
-      spectator.service.selection$.subscribe((value: Vehicle | undefined) => {
+      spectator.service.selection$.subscribe((value: Vehicles | undefined) => {
         expect(value).toEqual(undefined);
       });
     });

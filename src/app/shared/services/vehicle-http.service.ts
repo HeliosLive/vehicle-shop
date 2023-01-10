@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 
 import { Observable } from 'rxjs';
 
-import type { Vehicle } from '@shared/models/vehicle.interface';
+import type { Vehicles } from '@shared/models/vehicle.interface';
 
 /**
  * I would not use the data like this:
@@ -20,11 +20,11 @@ export class VehicleHttpService {
 
   constructor(private httpClient: HttpClient) {}
 
-  get(): Observable<Vehicle[]> {
+  get(): Observable<Vehicles[]> {
     /**
      * If you want to take the chances such as 'an error occurred' from the call,
      * by adding the `retry` operator, we can easily find a solution.
      */
-    return this.httpClient.get<Vehicle[]>(this.endpoint);
+    return this.httpClient.get<Vehicles[]>(this.endpoint);
   }
 }

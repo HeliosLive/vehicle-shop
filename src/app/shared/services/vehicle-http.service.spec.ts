@@ -5,7 +5,7 @@ import { asapScheduler, scheduled } from 'rxjs';
 
 import { VehicleHttpService } from './vehicle-http.service';
 
-import type { Vehicle } from '@shared/models/vehicle.interface';
+import type { Vehicles } from '@shared/models/vehicle.interface';
 import { VEHICLE_DATA } from '@test/vehicle.data';
 
 const apiUrl = 'assets/data';
@@ -15,7 +15,7 @@ const vehicleUrl = `${apiUrl}/${apiBaseEndPoint}`;
 describe('VehicleHttpService', () => {
   let spectator: SpectatorHttp<VehicleHttpService>;
 
-  const fakeResponse: Vehicle[] = VEHICLE_DATA;
+  const fakeResponse: Vehicles[] = VEHICLE_DATA;
   const httpClient = { get: jest.fn() };
   httpClient.get.mockReturnValue(scheduled([fakeResponse], asapScheduler));
 
@@ -41,7 +41,7 @@ describe('VehicleHttpService', () => {
       expect(httpClient.get).toHaveBeenCalled();
       expect(httpClient.get).toHaveBeenCalledWith(vehicleUrl);
 
-      data.subscribe((value: Vehicle[]) => {
+      data.subscribe((value: Vehicles[]) => {
         expect(value).toEqual(fakeResponse);
       });
     });
