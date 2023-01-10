@@ -1,181 +1,181 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="76" failures="0" errors="0" time="10.065">
-  <testsuite name="ErrorComponent" errors="0" failures="0" skipped="0" timestamp="2023-01-10T22:35:55" time="6.169" tests="3">
-    <testcase classname="ErrorComponent should create" name="ErrorComponent should create" time="0.051">
+<testsuites name="jest tests" tests="76" failures="0" errors="0" time="8.295">
+  <testsuite name="VehicleService" errors="0" failures="0" skipped="0" timestamp="2023-01-10T22:41:37" time="5.678" tests="7">
+    <testcase classname="VehicleService should create" name="VehicleService should create" time="0.018">
     </testcase>
-    <testcase classname="ErrorComponent onClick should call the method after clicking the button" name="ErrorComponent onClick should call the method after clicking the button" time="0.023">
+    <testcase classname="VehicleService set should set all vehicle types correctly" name="VehicleService set should set all vehicle types correctly" time="0.009">
     </testcase>
-    <testcase classname="ErrorComponent onClick should call navigateByUrl in router with `home` after method has been triggered" name="ErrorComponent onClick should call navigateByUrl in router with `home` after method has been triggered" time="0.017">
+    <testcase classname="VehicleService set should set all vehicle brands correctly" name="VehicleService set should set all vehicle brands correctly" time="0.004">
     </testcase>
-  </testsuite>
-  <testsuite name="ControlValueAccessorConnector" errors="0" failures="0" skipped="0" timestamp="2023-01-10T22:35:55" time="6.094" tests="1">
-    <testcase classname="ControlValueAccessorConnector should create" name="ControlValueAccessorConnector should create" time="0.052">
+    <testcase classname="VehicleService set should set all vehicle colors correctly" name="VehicleService set should set all vehicle colors correctly" time="0.011">
     </testcase>
-  </testsuite>
-  <testsuite name="VehicleHttpService" errors="0" failures="0" skipped="0" timestamp="2023-01-10T22:35:55" time="6.152" tests="2">
-    <testcase classname="VehicleHttpService should create" name="VehicleHttpService should create" time="0.022">
+    <testcase classname="VehicleService filter should filter the data from the source and assign the correct properties" name="VehicleService filter should filter the data from the source and assign the correct properties" time="0.006">
     </testcase>
-    <testcase classname="VehicleHttpService get should make an http get request and return the correct value" name="VehicleHttpService get should make an http get request and return the correct value" time="0.013">
+    <testcase classname="VehicleService select should set the selected vehicle correctly if it exists" name="VehicleService select should set the selected vehicle correctly if it exists" time="0.005">
+    </testcase>
+    <testcase classname="VehicleService select should set the selected vehicle as undefined if it does not exist" name="VehicleService select should set the selected vehicle as undefined if it does not exist" time="0.003">
     </testcase>
   </testsuite>
-  <testsuite name="Directive: RippleDirective" errors="0" failures="0" skipped="0" timestamp="2023-01-10T22:35:55" time="6.249" tests="7">
-    <testcase classname="Directive: RippleDirective should create an instance" name="Directive: RippleDirective should create an instance" time="0.086">
-    </testcase>
-    <testcase classname="Directive: RippleDirective should host has ripple container class" name="Directive: RippleDirective should host has ripple container class" time="0.041">
-    </testcase>
-    <testcase classname="Directive: RippleDirective onClick should method itself called after click" name="Directive: RippleDirective onClick should method itself called after click" time="0.03">
-    </testcase>
-    <testcase classname="Directive: RippleDirective onClick should host includes the element that has ripple class itself after click" name="Directive: RippleDirective onClick should host includes the element that has ripple class itself after click" time="0.021">
-    </testcase>
-    <testcase classname="Directive: RippleDirective onClick should host includes the element that has ripple color class after click" name="Directive: RippleDirective onClick should host includes the element that has ripple color class after click" time="0.033">
-    </testcase>
-    <testcase classname="Directive: RippleDirective onClick should host includes the element that has ripple speed class after click" name="Directive: RippleDirective onClick should host includes the element that has ripple speed class after click" time="0.014">
-    </testcase>
-    <testcase classname="Directive: RippleDirective onClick should remove old ripple element after multiple clicks" name="Directive: RippleDirective onClick should remove old ripple element after multiple clicks" time="0.027">
+  <testsuite name="ControlValueAccessorConnector" errors="0" failures="0" skipped="0" timestamp="2023-01-10T22:41:37" time="5.749" tests="1">
+    <testcase classname="ControlValueAccessorConnector should create" name="ControlValueAccessorConnector should create" time="0.041">
     </testcase>
   </testsuite>
-  <testsuite name="LabelComponent" errors="0" failures="0" skipped="0" timestamp="2023-01-10T22:35:55" time="6.21" tests="10">
-    <testcase classname="LabelComponent should create" name="LabelComponent should create" time="0.07">
+  <testsuite name="VehicleHttpService" errors="0" failures="0" skipped="0" timestamp="2023-01-10T22:41:37" time="5.733" tests="2">
+    <testcase classname="VehicleHttpService should create" name="VehicleHttpService should create" time="0.02">
     </testcase>
-    <testcase classname="LabelComponent should Host have data-cy attribute equals to testId input" name="LabelComponent should Host have data-cy attribute equals to testId input" time="0.068">
-    </testcase>
-    <testcase classname="LabelComponent should color data attribute equals to color input" name="LabelComponent should color data attribute equals to color input" time="0.023">
-    </testcase>
-    <testcase classname="LabelComponent should size data attribute equals to size input" name="LabelComponent should size data attribute equals to size input" time="0.045">
-    </testcase>
-    <testcase classname="LabelComponent should ellipsis data attribute equals to ellipsis input" name="LabelComponent should ellipsis data attribute equals to ellipsis input" time="0.032">
-    </testcase>
-    <testcase classname="LabelComponent should underline data attribute equals to underline input" name="LabelComponent should underline data attribute equals to underline input" time="0.025">
-    </testcase>
-    <testcase classname="LabelComponent should disabled data attribute equals to disabled input" name="LabelComponent should disabled data attribute equals to disabled input" time="0.015">
-    </testcase>
-    <testcase classname="LabelComponent should pointer data attribute equals to pointer input" name="LabelComponent should pointer data attribute equals to pointer input" time="0.033">
-    </testcase>
-    <testcase classname="LabelComponent should display the projected content correctly" name="LabelComponent should display the projected content correctly" time="0.023">
-    </testcase>
-    <testcase classname="LabelComponent should label for attribute equals to for input" name="LabelComponent should label for attribute equals to for input" time="0.04">
+    <testcase classname="VehicleHttpService get should make an http get request and return the correct value" name="VehicleHttpService get should make an http get request and return the correct value" time="0.008">
     </testcase>
   </testsuite>
-  <testsuite name="ThemeService" errors="0" failures="0" skipped="0" timestamp="2023-01-10T22:35:55" time="6.281" tests="4">
-    <testcase classname="ThemeService should create" name="ThemeService should create" time="0.017">
+  <testsuite name="Option" errors="0" failures="0" skipped="0" timestamp="2023-01-10T22:41:37" time="5.792" tests="8">
+    <testcase classname="Option OptionComponentHost content projection should Host text content equals to content projection value" name="Option OptionComponentHost content projection should Host text content equals to content projection value" time="0.052">
     </testcase>
-    <testcase classname="ThemeService initialize should set the light theme if schema does not match" name="ThemeService initialize should set the light theme if schema does not match" time="0.008">
+    <testcase classname="Option OptionComponentHost disabled should Host disabled attr does not exist if disabled input is not passed" name="Option OptionComponentHost disabled should Host disabled attr does not exist if disabled input is not passed" time="0.02">
     </testcase>
-    <testcase classname="ThemeService initialize should set the dark theme if schema matches" name="ThemeService initialize should set the dark theme if schema matches" time="0.005">
+    <testcase classname="Option OptionComponentHost disabled should Host disabled attr does not exist if disabled input is false" name="Option OptionComponentHost disabled should Host disabled attr does not exist if disabled input is false" time="0.03">
     </testcase>
-    <testcase classname="ThemeService initialize should set the subject with correct value" name="ThemeService initialize should set the subject with correct value" time="0.005">
+    <testcase classname="Option OptionComponentHost disabled should Host disabled attr exist if disabled input is true" name="Option OptionComponentHost disabled should Host disabled attr exist if disabled input is true" time="0.029">
     </testcase>
-  </testsuite>
-  <testsuite name="AppComponent" errors="0" failures="0" skipped="0" timestamp="2023-01-10T22:35:55" time="6.332" tests="2">
-    <testcase classname="AppComponent should create" name="AppComponent should create" time="0.038">
+    <testcase classname="Option OptionComponentHost disabled should Host hls-option-disabled class exist if disabled input is true" name="Option OptionComponentHost disabled should Host hls-option-disabled class exist if disabled input is true" time="0.028">
     </testcase>
-    <testcase classname="AppComponent should call theme service methods for setting the theme" name="AppComponent should call theme service methods for setting the theme" time="0.015">
-    </testcase>
-  </testsuite>
-  <testsuite name="Select" errors="0" failures="0" skipped="0" timestamp="2023-01-10T22:35:55" time="6.366" tests="9">
-    <testcase classname="Select SelectComponentHost content projection should Host element content equals to content projection value" name="Select SelectComponentHost content projection should Host element content equals to content projection value" time="0.087">
-    </testcase>
-    <testcase classname="Select SelectComponentHost ngAfterContentInit should ContentChildren elements have the same color as the input value" name="Select SelectComponentHost ngAfterContentInit should ContentChildren elements have the same color as the input value" time="0.051">
-    </testcase>
-    <testcase classname="Select SelectComponentHost disabled should Host disabled attr does not exist if disabled input is not passed" name="Select SelectComponentHost disabled should Host disabled attr does not exist if disabled input is not passed" time="0.037">
-    </testcase>
-    <testcase classname="Select SelectComponentHost disabled should Host disabled attr does not exist if disabled input is false" name="Select SelectComponentHost disabled should Host disabled attr does not exist if disabled input is false" time="0.023">
-    </testcase>
-    <testcase classname="Select SelectComponentHost disabled should Host disabled attr exist if disabled input is true" name="Select SelectComponentHost disabled should Host disabled attr exist if disabled input is true" time="0.032">
-    </testcase>
-    <testcase classname="Select SelectComponentHost disabled should Host hls-select-disabled class exist if disabled input is true" name="Select SelectComponentHost disabled should Host hls-select-disabled class exist if disabled input is true" time="0.019">
-    </testcase>
-    <testcase classname="Select SelectComponentHost disabled should Host hls-select-disabled class does not exist if disabled input is false" name="Select SelectComponentHost disabled should Host hls-select-disabled class does not exist if disabled input is false" time="0.022">
-    </testcase>
-    <testcase classname="Select SelectComponent should Host color attr equals to color input" name="Select SelectComponent should Host color attr equals to color input" time="0.012">
-    </testcase>
-    <testcase classname="Select SelectComponent should Host data-cy attr equals to testId input" name="Select SelectComponent should Host data-cy attr equals to testId input" time="0.016">
-    </testcase>
-  </testsuite>
-  <testsuite name="Option" errors="0" failures="0" skipped="0" timestamp="2023-01-10T22:35:55" time="6.376" tests="8">
-    <testcase classname="Option OptionComponentHost content projection should Host text content equals to content projection value" name="Option OptionComponentHost content projection should Host text content equals to content projection value" time="0.067">
-    </testcase>
-    <testcase classname="Option OptionComponentHost disabled should Host disabled attr does not exist if disabled input is not passed" name="Option OptionComponentHost disabled should Host disabled attr does not exist if disabled input is not passed" time="0.028">
-    </testcase>
-    <testcase classname="Option OptionComponentHost disabled should Host disabled attr does not exist if disabled input is false" name="Option OptionComponentHost disabled should Host disabled attr does not exist if disabled input is false" time="0.025">
-    </testcase>
-    <testcase classname="Option OptionComponentHost disabled should Host disabled attr exist if disabled input is true" name="Option OptionComponentHost disabled should Host disabled attr exist if disabled input is true" time="0.016">
-    </testcase>
-    <testcase classname="Option OptionComponentHost disabled should Host hls-option-disabled class exist if disabled input is true" name="Option OptionComponentHost disabled should Host hls-option-disabled class exist if disabled input is true" time="0.011">
-    </testcase>
-    <testcase classname="Option OptionComponentHost disabled should Host hls-option-disabled class does not exist if disabled input is false" name="Option OptionComponentHost disabled should Host hls-option-disabled class does not exist if disabled input is false" time="0.018">
+    <testcase classname="Option OptionComponentHost disabled should Host hls-option-disabled class does not exist if disabled input is false" name="Option OptionComponentHost disabled should Host hls-option-disabled class does not exist if disabled input is false" time="0.013">
     </testcase>
     <testcase classname="Option OptionComponent should Host color attr equals to color input" name="Option OptionComponent should Host color attr equals to color input" time="0.014">
     </testcase>
-    <testcase classname="Option OptionComponent should Host data-cy attr equals to testId input" name="Option OptionComponent should Host data-cy attr equals to testId input" time="0.016">
+    <testcase classname="Option OptionComponent should Host data-cy attr equals to testId input" name="Option OptionComponent should Host data-cy attr equals to testId input" time="0.013">
     </testcase>
   </testsuite>
-  <testsuite name="Button" errors="0" failures="0" skipped="0" timestamp="2023-01-10T22:35:55" time="6.491" tests="15">
-    <testcase classname="Button ButtonComponentHost content projection should Host text content equals to content projection value" name="Button ButtonComponentHost content projection should Host text content equals to content projection value" time="0.084">
+  <testsuite name="ThemeService" errors="0" failures="0" skipped="0" timestamp="2023-01-10T22:41:37" time="5.866" tests="4">
+    <testcase classname="ThemeService should create" name="ThemeService should create" time="0.018">
     </testcase>
-    <testcase classname="Button ButtonComponentHost selector should Host has the attr for passed selector" name="Button ButtonComponentHost selector should Host has the attr for passed selector" time="0.033">
+    <testcase classname="ThemeService initialize should set the light theme if schema does not match" name="ThemeService initialize should set the light theme if schema does not match" time="0.008">
     </testcase>
-    <testcase classname="Button ButtonComponentHost selector should Host has the specific class for passed selector" name="Button ButtonComponentHost selector should Host has the specific class for passed selector" time="0.023">
+    <testcase classname="ThemeService initialize should set the dark theme if schema matches" name="ThemeService initialize should set the dark theme if schema matches" time="0.003">
     </testcase>
-    <testcase classname="Button ButtonComponentHost disabled should Host disabled attr does not exist if disabled input is not passed" name="Button ButtonComponentHost disabled should Host disabled attr does not exist if disabled input is not passed" time="0.018">
+    <testcase classname="ThemeService initialize should set the subject with correct value" name="ThemeService initialize should set the subject with correct value" time="0.003">
     </testcase>
-    <testcase classname="Button ButtonComponentHost disabled should Host disabled attr does not exist if disabled input is false" name="Button ButtonComponentHost disabled should Host disabled attr does not exist if disabled input is false" time="0.031">
+  </testsuite>
+  <testsuite name="HomeComponent" errors="0" failures="0" skipped="0" timestamp="2023-01-10T22:41:37" time="5.906" tests="4">
+    <testcase classname="HomeComponent should create" name="HomeComponent should create" time="0.101">
     </testcase>
-    <testcase classname="Button ButtonComponentHost disabled should Host disabled attr exist if disabled input is true" name="Button ButtonComponentHost disabled should Host disabled attr exist if disabled input is true" time="0.03">
+    <testcase classname="HomeComponent ngOnInit should call the set method when constructor initialized" name="HomeComponent ngOnInit should call the set method when constructor initialized" time="0.062">
     </testcase>
-    <testcase classname="Button ButtonComponentHost disabled should Host hls-button-disabled class exist if disabled input is true" name="Button ButtonComponentHost disabled should Host hls-button-disabled class exist if disabled input is true" time="0.033">
+    <testcase classname="HomeComponent onSubmit should call the select method in vehicleService with the form value &amp; redirect afterwards" name="HomeComponent onSubmit should call the select method in vehicleService with the form value &amp; redirect afterwards" time="0.031">
     </testcase>
-    <testcase classname="Button ButtonComponentHost disabled should Host hls-button-disabled class does not exist if disabled input is false" name="Button ButtonComponentHost disabled should Host hls-button-disabled class does not exist if disabled input is false" time="0.026">
+    <testcase classname="HomeComponent onReset should call the reset method in the form" name="HomeComponent onReset should call the reset method in the form" time="0.027">
     </testcase>
-    <testcase classname="Button ButtonComponent should create" name="Button ButtonComponent should create" time="0.026">
+  </testsuite>
+  <testsuite name="Select" errors="0" failures="0" skipped="0" timestamp="2023-01-10T22:41:37" time="5.946" tests="9">
+    <testcase classname="Select SelectComponentHost content projection should Host element content equals to content projection value" name="Select SelectComponentHost content projection should Host element content equals to content projection value" time="0.077">
     </testcase>
-    <testcase classname="Button ButtonComponent should Host color attr equals to color input" name="Button ButtonComponent should Host color attr equals to color input" time="0.024">
+    <testcase classname="Select SelectComponentHost ngAfterContentInit should ContentChildren elements have the same color as the input value" name="Select SelectComponentHost ngAfterContentInit should ContentChildren elements have the same color as the input value" time="0.037">
     </testcase>
-    <testcase classname="Button ButtonComponent should Host data-cy attr equals to testId input" name="Button ButtonComponent should Host data-cy attr equals to testId input" time="0.027">
+    <testcase classname="Select SelectComponentHost disabled should Host disabled attr does not exist if disabled input is not passed" name="Select SelectComponentHost disabled should Host disabled attr does not exist if disabled input is not passed" time="0.019">
     </testcase>
-    <testcase classname="Button ButtonComponent label should label color equals to sun when button type is primary" name="Button ButtonComponent label should label color equals to sun when button type is primary" time="0.013">
+    <testcase classname="Select SelectComponentHost disabled should Host disabled attr does not exist if disabled input is false" name="Select SelectComponentHost disabled should Host disabled attr does not exist if disabled input is false" time="0.031">
     </testcase>
-    <testcase classname="Button ButtonComponent label should label color equals to info when button type is secondary" name="Button ButtonComponent label should label color equals to info when button type is secondary" time="0.014">
+    <testcase classname="Select SelectComponentHost disabled should Host disabled attr exist if disabled input is true" name="Select SelectComponentHost disabled should Host disabled attr exist if disabled input is true" time="0.025">
     </testcase>
-    <testcase classname="Button ButtonComponent label should label color equals to white when button type is danger" name="Button ButtonComponent label should label color equals to white when button type is danger" time="0.01">
+    <testcase classname="Select SelectComponentHost disabled should Host hls-select-disabled class exist if disabled input is true" name="Select SelectComponentHost disabled should Host hls-select-disabled class exist if disabled input is true" time="0.031">
+    </testcase>
+    <testcase classname="Select SelectComponentHost disabled should Host hls-select-disabled class does not exist if disabled input is false" name="Select SelectComponentHost disabled should Host hls-select-disabled class does not exist if disabled input is false" time="0.031">
+    </testcase>
+    <testcase classname="Select SelectComponent should Host color attr equals to color input" name="Select SelectComponent should Host color attr equals to color input" time="0.011">
+    </testcase>
+    <testcase classname="Select SelectComponent should Host data-cy attr equals to testId input" name="Select SelectComponent should Host data-cy attr equals to testId input" time="0.017">
+    </testcase>
+  </testsuite>
+  <testsuite name="Directive: RippleDirective" errors="0" failures="0" skipped="0" timestamp="2023-01-10T22:41:37" time="5.941" tests="7">
+    <testcase classname="Directive: RippleDirective should create an instance" name="Directive: RippleDirective should create an instance" time="0.058">
+    </testcase>
+    <testcase classname="Directive: RippleDirective should host has ripple container class" name="Directive: RippleDirective should host has ripple container class" time="0.026">
+    </testcase>
+    <testcase classname="Directive: RippleDirective onClick should method itself called after click" name="Directive: RippleDirective onClick should method itself called after click" time="0.032">
+    </testcase>
+    <testcase classname="Directive: RippleDirective onClick should host includes the element that has ripple class itself after click" name="Directive: RippleDirective onClick should host includes the element that has ripple class itself after click" time="0.025">
+    </testcase>
+    <testcase classname="Directive: RippleDirective onClick should host includes the element that has ripple color class after click" name="Directive: RippleDirective onClick should host includes the element that has ripple color class after click" time="0.017">
+    </testcase>
+    <testcase classname="Directive: RippleDirective onClick should host includes the element that has ripple speed class after click" name="Directive: RippleDirective onClick should host includes the element that has ripple speed class after click" time="0.011">
+    </testcase>
+    <testcase classname="Directive: RippleDirective onClick should remove old ripple element after multiple clicks" name="Directive: RippleDirective onClick should remove old ripple element after multiple clicks" time="0.018">
+    </testcase>
+  </testsuite>
+  <testsuite name="ErrorComponent" errors="0" failures="0" skipped="0" timestamp="2023-01-10T22:41:37" time="5.951" tests="3">
+    <testcase classname="ErrorComponent should create" name="ErrorComponent should create" time="0.046">
+    </testcase>
+    <testcase classname="ErrorComponent onClick should call the method after clicking the button" name="ErrorComponent onClick should call the method after clicking the button" time="0.026">
+    </testcase>
+    <testcase classname="ErrorComponent onClick should call navigateByUrl in router with `home` after method has been triggered" name="ErrorComponent onClick should call navigateByUrl in router with `home` after method has been triggered" time="0.011">
+    </testcase>
+  </testsuite>
+  <testsuite name="SummaryComponent" errors="0" failures="0" skipped="0" timestamp="2023-01-10T22:41:37" time="6.039" tests="4">
+    <testcase classname="SummaryComponent should create" name="SummaryComponent should create" time="0.064">
+    </testcase>
+    <testcase classname="SummaryComponent ngOnInit should img visible if there is a data" name="SummaryComponent ngOnInit should img visible if there is a data" time="0.046">
+    </testcase>
+    <testcase classname="SummaryComponent onClick should call the method after clicking the button if there is no data" name="SummaryComponent onClick should call the method after clicking the button if there is no data" time="0.029">
+    </testcase>
+    <testcase classname="SummaryComponent onClick should call navigateByUrl in router with `home` after method has been triggered" name="SummaryComponent onClick should call navigateByUrl in router with `home` after method has been triggered" time="0.025">
+    </testcase>
+  </testsuite>
+  <testsuite name="Button" errors="0" failures="0" skipped="0" timestamp="2023-01-10T22:41:37" time="6.048" tests="15">
+    <testcase classname="Button ButtonComponentHost content projection should Host text content equals to content projection value" name="Button ButtonComponentHost content projection should Host text content equals to content projection value" time="0.072">
+    </testcase>
+    <testcase classname="Button ButtonComponentHost selector should Host has the attr for passed selector" name="Button ButtonComponentHost selector should Host has the attr for passed selector" time="0.037">
+    </testcase>
+    <testcase classname="Button ButtonComponentHost selector should Host has the specific class for passed selector" name="Button ButtonComponentHost selector should Host has the specific class for passed selector" time="0.014">
+    </testcase>
+    <testcase classname="Button ButtonComponentHost disabled should Host disabled attr does not exist if disabled input is not passed" name="Button ButtonComponentHost disabled should Host disabled attr does not exist if disabled input is not passed" time="0.011">
+    </testcase>
+    <testcase classname="Button ButtonComponentHost disabled should Host disabled attr does not exist if disabled input is false" name="Button ButtonComponentHost disabled should Host disabled attr does not exist if disabled input is false" time="0.03">
+    </testcase>
+    <testcase classname="Button ButtonComponentHost disabled should Host disabled attr exist if disabled input is true" name="Button ButtonComponentHost disabled should Host disabled attr exist if disabled input is true" time="0.011">
+    </testcase>
+    <testcase classname="Button ButtonComponentHost disabled should Host hls-button-disabled class exist if disabled input is true" name="Button ButtonComponentHost disabled should Host hls-button-disabled class exist if disabled input is true" time="0.021">
+    </testcase>
+    <testcase classname="Button ButtonComponentHost disabled should Host hls-button-disabled class does not exist if disabled input is false" name="Button ButtonComponentHost disabled should Host hls-button-disabled class does not exist if disabled input is false" time="0.013">
+    </testcase>
+    <testcase classname="Button ButtonComponent should create" name="Button ButtonComponent should create" time="0.02">
+    </testcase>
+    <testcase classname="Button ButtonComponent should Host color attr equals to color input" name="Button ButtonComponent should Host color attr equals to color input" time="0.012">
+    </testcase>
+    <testcase classname="Button ButtonComponent should Host data-cy attr equals to testId input" name="Button ButtonComponent should Host data-cy attr equals to testId input" time="0.011">
+    </testcase>
+    <testcase classname="Button ButtonComponent label should label color equals to sun when button type is primary" name="Button ButtonComponent label should label color equals to sun when button type is primary" time="0.017">
+    </testcase>
+    <testcase classname="Button ButtonComponent label should label color equals to info when button type is secondary" name="Button ButtonComponent label should label color equals to info when button type is secondary" time="0.016">
+    </testcase>
+    <testcase classname="Button ButtonComponent label should label color equals to white when button type is danger" name="Button ButtonComponent label should label color equals to white when button type is danger" time="0.014">
     </testcase>
     <testcase classname="Button ButtonComponent HostListener should call preventDefault from the triggering on MouseEvent" name="Button ButtonComponent HostListener should call preventDefault from the triggering on MouseEvent" time="0.016">
     </testcase>
   </testsuite>
-  <testsuite name="VehicleService" errors="0" failures="0" skipped="0" timestamp="2023-01-10T22:35:55" time="7.259" tests="7">
-    <testcase classname="VehicleService should create" name="VehicleService should create" time="0.011">
+  <testsuite name="LabelComponent" errors="0" failures="0" skipped="0" timestamp="2023-01-10T22:41:37" time="6.15" tests="10">
+    <testcase classname="LabelComponent should create" name="LabelComponent should create" time="0.06">
     </testcase>
-    <testcase classname="VehicleService set should set all vehicle types correctly" name="VehicleService set should set all vehicle types correctly" time="0.005">
+    <testcase classname="LabelComponent should Host have data-cy attribute equals to testId input" name="LabelComponent should Host have data-cy attribute equals to testId input" time="0.035">
     </testcase>
-    <testcase classname="VehicleService set should set all vehicle brands correctly" name="VehicleService set should set all vehicle brands correctly" time="0.002">
+    <testcase classname="LabelComponent should color data attribute equals to color input" name="LabelComponent should color data attribute equals to color input" time="0.028">
     </testcase>
-    <testcase classname="VehicleService set should set all vehicle colors correctly" name="VehicleService set should set all vehicle colors correctly" time="0.006">
+    <testcase classname="LabelComponent should size data attribute equals to size input" name="LabelComponent should size data attribute equals to size input" time="0.027">
     </testcase>
-    <testcase classname="VehicleService filter should filter the data from the source and assign the correct properties" name="VehicleService filter should filter the data from the source and assign the correct properties" time="0.003">
+    <testcase classname="LabelComponent should ellipsis data attribute equals to ellipsis input" name="LabelComponent should ellipsis data attribute equals to ellipsis input" time="0.017">
     </testcase>
-    <testcase classname="VehicleService select should set the selected vehicle correctly if it exists" name="VehicleService select should set the selected vehicle correctly if it exists" time="0.006">
+    <testcase classname="LabelComponent should underline data attribute equals to underline input" name="LabelComponent should underline data attribute equals to underline input" time="0.029">
     </testcase>
-    <testcase classname="VehicleService select should set the selected vehicle as undefined if it does not exist" name="VehicleService select should set the selected vehicle as undefined if it does not exist" time="0.002">
+    <testcase classname="LabelComponent should disabled data attribute equals to disabled input" name="LabelComponent should disabled data attribute equals to disabled input" time="0.031">
     </testcase>
-  </testsuite>
-  <testsuite name="SummaryComponent" errors="0" failures="0" skipped="0" timestamp="2023-01-10T22:35:55" time="7.659" tests="4">
-    <testcase classname="SummaryComponent should create" name="SummaryComponent should create" time="0.04">
+    <testcase classname="LabelComponent should pointer data attribute equals to pointer input" name="LabelComponent should pointer data attribute equals to pointer input" time="0.033">
     </testcase>
-    <testcase classname="SummaryComponent ngOnInit should img visible if there is a data" name="SummaryComponent ngOnInit should img visible if there is a data" time="0.036">
+    <testcase classname="LabelComponent should display the projected content correctly" name="LabelComponent should display the projected content correctly" time="0.032">
     </testcase>
-    <testcase classname="SummaryComponent onClick should call the method after clicking the button if there is no data" name="SummaryComponent onClick should call the method after clicking the button if there is no data" time="0.017">
-    </testcase>
-    <testcase classname="SummaryComponent onClick should call navigateByUrl in router with `home` after method has been triggered" name="SummaryComponent onClick should call navigateByUrl in router with `home` after method has been triggered" time="0.01">
+    <testcase classname="LabelComponent should label for attribute equals to for input" name="LabelComponent should label for attribute equals to for input" time="0.031">
     </testcase>
   </testsuite>
-  <testsuite name="HomeComponent" errors="0" failures="0" skipped="0" timestamp="2023-01-10T22:35:55" time="7.958" tests="4">
-    <testcase classname="HomeComponent should create" name="HomeComponent should create" time="0.051">
+  <testsuite name="AppComponent" errors="0" failures="0" skipped="0" timestamp="2023-01-10T22:41:37" time="6.176" tests="2">
+    <testcase classname="AppComponent should create" name="AppComponent should create" time="0.021">
     </testcase>
-    <testcase classname="HomeComponent ngOnInit should call the set method when constructor initialized" name="HomeComponent ngOnInit should call the set method when constructor initialized" time="0.031">
-    </testcase>
-    <testcase classname="HomeComponent onSubmit should call the select method in vehicleService with the form value &amp; redirect afterwards" name="HomeComponent onSubmit should call the select method in vehicleService with the form value &amp; redirect afterwards" time="0.029">
-    </testcase>
-    <testcase classname="HomeComponent onReset should call the reset method in the form" name="HomeComponent onReset should call the reset method in the form" time="0.013">
+    <testcase classname="AppComponent should call theme service methods for setting the theme" name="AppComponent should call theme service methods for setting the theme" time="0.011">
     </testcase>
   </testsuite>
 </testsuites>
