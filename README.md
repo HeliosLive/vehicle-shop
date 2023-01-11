@@ -46,6 +46,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - Displaying available vehicle types, brands and colors to checkout.
 - Filter out the vehicle by selecting any property on dropdown.
 - Delightful animation to force you to buy one of them at least :P
+- Dark mode is supported :) Just switch your device theme and see the result.
 
 ## Prerequisites
 
