@@ -1,0 +1,7 @@
+[build]
+  publish = "dist/vehicle-shop"
+  command = "npm run build:prod"
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
