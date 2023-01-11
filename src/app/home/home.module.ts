@@ -9,6 +9,7 @@ import { HomeComponent } from './home.component';
 
 import { HlsButtonModule } from '@shared/components/button/button.module';
 import { HlsLabelModule } from '@shared/components/label/label.module';
+import { HlsLottieAnimationModule } from '@shared/components/lottie-animation/lottie-animation.module';
 import { HlsSelectModule } from '@shared/components/select/select.module';
 
 @NgModule({
@@ -20,6 +21,7 @@ import { HlsSelectModule } from '@shared/components/select/select.module';
     HomeRoutingModule,
     HlsButtonModule,
     HlsLabelModule,
+    HlsLottieAnimationModule,
     HlsSelectModule,
   ],
   exports: [HomeComponent],

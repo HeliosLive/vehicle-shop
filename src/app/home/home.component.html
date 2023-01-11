@@ -1,11 +1,23 @@
 <hls-label size="h1">Welcome to Vehicle Shop</hls-label>
 
-<form novalidate autocomplete="off" [formGroup]="vehicleForm" (ngSubmit)="onSubmit()" (reset)="onReset()">
+<div class="animations" [ngSwitch]="lotteryNumber">
+    <hls-lottie-animation *ngSwitchCase="1" animationPath="car">
+    </hls-lottie-animation>
+    <hls-lottie-animation *ngSwitchCase="2" animationPath="airplane">
+    </hls-lottie-animation>
+    <hls-lottie-animation *ngSwitchDefault animationPath="train">
+    </hls-lottie-animation>
+</div>
+
+<form novalidate autocomplete="off" [formGroup]="vehicleForm">
     <div *ngIf="type$ | async as types" class="group">
         <hls-label for="type" color="neutral-3">type</hls-label>
         <select hls-select name="type" id="type" formControlName="type">
-            <option hls-option value="null" [disabled]="true" selected>Choose an option</option>
-            <option *ngFor="let type of types" hls-option [value]="type">{{type}}
+            <option hls-option value="null" [disabled]="true" selected>
+                Choose an option
+            </option>
+            <option *ngFor="let type of types" hls-option [value]="type">
+                {{ type }}
             </option>
         </select>
     </div>
@@ -13,8 +25,11 @@
     <div *ngIf="brand$ | async as brands" class="group">
         <hls-label for="brand" color="neutral-3">brand</hls-label>
         <select hls-select name="brand" id="brand" formControlName="brand">
-            <option hls-option value="null" [disabled]="true" selected>Choose an option</option>
-            <option *ngFor="let brand of brands" hls-option [value]="brand">{{brand}}
+            <option hls-option value="null" [disabled]="true" selected>
+                Choose an option
+            </option>
+            <option *ngFor="let brand of brands" hls-option [value]="brand">
+                {{ brand }}
             </option>
         </select>
     </div>
@@ -22,8 +37,11 @@
     <div *ngIf="colors$ | async as colors" class="group">
         <hls-label for="color" color="neutral-3">color</hls-label>
         <select hls-select name="color" id="color" formControlName="color">
-            <option hls-option value="null" [disabled]="true" selected>Choose an option</option>
-            <option *ngFor="let color of colors" hls-option [value]="color">{{color}}
+            <option hls-option value="null" [disabled]="true" selected>
+                Choose an option
+            </option>
+            <option *ngFor="let color of colors" hls-option [value]="color">
+                {{ color }}
             </option>
         </select>
     </div>
@@ -33,7 +51,10 @@
         <hls-label size="p1" color="info">All filters are connected to each other.</hls-label>
     </div>
 
-    <button hls-button-raised type="submit" [disabled]="!vehicleForm.valid" testId="submit-button">Submit</button>
-    <button hls-button-flat type="reset" color="danger" [fullWidth]="false" testId="reset-button">Restart the
-        selection</button>
+    <button hls-button-raised [disabled]="!vehicleForm.valid" testId="submit-button" (click)="onSubmit()">
+        Submit
+    </button>
+    <button hls-button-flat color="danger" [fullWidth]="false" testId="reset-button" (click)="onReset()">
+        Restart the selection
+    </button>
 </form>

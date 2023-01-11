@@ -1,8 +1,8 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { Observable, Subject, take, takeUntil, tap } from 'rxjs';
+import { Observable, Subject, take, takeUntil, tap, timer } from 'rxjs';
 
 import type { Vehicles, Vehicle } from '@shared/models/vehicle.interface';
 import { VehicleHttpService } from '@shared/services/vehicle-http.service';
@@ -14,7 +14,7 @@ import { assertTypeMapper } from '@shared/helpers/assert-type-mapper';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements OnInit, OnDestroy {
+export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   type$!: Observable<Vehicles['type'][]>;
   brand$!: Observable<Vehicles['brand'][]>;
   colors$!: Observable<Vehicles['colors']>;
@@ -34,7 +34,15 @@ export class HomeComponent implements OnInit, OnDestroy {
     }),
   });
 
-  destroy$ = new Subject<void>();
+  private destroy$ = new Subject<void>();
+
+  /**
+   * This is connected to css `move` animation duration.
+   * Update both of them at the same time.
+   * Otherwise, it is going to cause some UI problems.
+   */
+  intervalTime: number = 6000;
+  lotteryNumber!: number;
 
   constructor(
     private router: Router,
@@ -46,6 +54,10 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.assignObsValues();
     this.fetchData();
     this.updateFilters();
+  }
+
+  ngAfterViewInit(): void {
+    this.setAnimationLotteryNumber();
   }
 
   ngOnDestroy(): void {
@@ -64,6 +76,17 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   onReset(): void {
     this.vehicleForm.reset();
+  }
+
+  private setAnimationLotteryNumber(): void {
+    timer(0, this.intervalTime)
+      .pipe(
+        takeUntil(this.destroy$),
+        tap(() => {
+          this.lotteryNumber = Math.floor(Math.random() * 3);
+        })
+      )
+      .subscribe();
   }
 
   private assignObsValues(): void {

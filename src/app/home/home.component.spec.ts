@@ -1,4 +1,5 @@
-import { fakeAsync, tick } from '@angular/core/testing';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { fakeAsync, flush, tick } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -9,7 +10,9 @@ import { MockComponent } from 'ng-mocks';
 import { HomeComponent } from './home.component';
 
 import type { Vehicle } from '@shared/models/vehicle.interface';
+import { ButtonComponent } from '@shared/components/button/button.component';
 import { LabelComponent } from '@shared/components/label/label.component';
+import { LottieAnimationComponent } from '@shared/components/lottie-animation/lottie-animation.component';
 import { VehicleService } from '@shared/services/vehicle.service';
 import { VehicleHttpService } from '@shared/services/vehicle-http.service';
 import { VEHICLE_DATA } from '@test/vehicle.data';
@@ -26,9 +29,14 @@ describe('HomeComponent', () => {
 
   const createComponent = createComponentFactory({
     component: HomeComponent,
-    declarations: [MockComponent(LabelComponent)],
+    declarations: [
+      MockComponent(ButtonComponent),
+      MockComponent(LabelComponent),
+      MockComponent(LottieAnimationComponent),
+    ],
     imports: [ReactiveFormsModule],
     mocks: [Router, VehicleHttpService, VehicleService],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
     shallow: false,
     detectChanges: false,
   });
@@ -65,10 +73,29 @@ describe('HomeComponent', () => {
     }));
   });
 
+  describe('ngAfterViewInit', () => {
+    it('should lottery number be undefined before initialized', () => {
+      expect(spectator.component.lotteryNumber).toBeUndefined();
+    });
+
+    it('should lottery number can not be undefined after initialized', fakeAsync(() => {
+      spectator.component.ngAfterViewInit();
+
+      tick();
+
+      spectator.component.ngOnDestroy();
+
+      expect(spectator.component.lotteryNumber).not.toBeUndefined();
+
+      flush();
+    }));
+  });
+
   describe('onSubmit', () => {
     it('should call the select method in vehicleService with the form value & redirect afterwards', fakeAsync(() => {
       spectator.component.ngOnInit();
       spectator.component.vehicleForm.patchValue(formValue);
+
       tick();
 
       jest.spyOn(vehicleService, 'select');

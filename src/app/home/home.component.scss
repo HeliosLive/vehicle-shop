@@ -1,7 +1,24 @@
 :host {
   display: grid;
   height: 100%;
-  align-content: space-evenly;
+  align-content: center;
+
+  .animations {
+    display: flex;
+    height: calc(var(--vh, 1vh) * 20);
+
+    hls-lottie-animation {
+      opacity: 0;
+
+      /**
+      * This is connected to intervalTime.
+      * Update both of them at the same time.
+      * Otherwise, it is going to cause some UI problems.
+      */
+      --hls-lottie-animation-duration: 6000ms;
+      animation: move var(--hls-lottie-animation-duration) linear infinite;
+    }
+  }
 
   form {
     display: grid;
@@ -14,7 +31,23 @@
 
       &__icon {
         width: 1rem;
+        margin-right: 0.25rem;
       }
     }
+  }
+}
+
+@keyframes move {
+  0% {
+    opacity: 0;
+    transform: translateX(calc(var(--vw, 1vw) * -50));
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(calc(var(--vw, 1vw) * 25));
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(calc(var(--vw, 1vw) * 100));
   }
 }
